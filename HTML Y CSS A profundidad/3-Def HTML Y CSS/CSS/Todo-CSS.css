@@ -1,0 +1,70 @@
+/* ESTILOS DEL MAIN */
+.main-nav{
+    color: rgb(0, 255, 191);
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 10px;
+    background-color: blueviolet;
+}
+/* El display sirve para que los objetos que se encuentran el la seccion seleccionada se pongan uno a lado del otro */
+.main-nav__item{
+  display: inline-block;  
+}
+/* PSEUDO CLASES */
+.main-nav a {
+ color: rgb(255, 255, 255);
+ padding: 5px;
+ border-radius: 3px;
+ text-decoration: none;
+ background-color: rgb(32, 165, 6);
+}
+/* HOVER sirve como evento: cuando colocamos el maouse sobre el texto se ilumina*/
+.main-nav__item a:hover{
+  color:blueviolet;
+}
+/* ACTIVE sirve como evento: cuando hacemos click el maouse sobre el texto se ilumina*/
+.main-nav__item a:active{
+    color:red;
+  }
+  /*PSEUDO ELEMENTOS */
+.main-nav__item a::after{
+    content: "!";
+}
+/*Algunos Pseudo-classes:
+:root{}
+//representa elemento HTML, con la especificidad de clase //usado para anidar variables CSS
+:active
+//se activa al hacer clic down
+:visited
+//cambio visual cuando se visita un enlace
+:hover
+//permite cambiar el estado de un elemento cuando elmause se sobrepone sobre él
+:first-child // para afectar solo al primer hijo // se coloca en el padre (ul) para afectar a su primer hijo (li)
+:last-child // para afectar solo al ultimo hijo
+:not  //negar una codiciones (ignorar una condicion) //ejemplo .clase:not(last-child)
+//afecto a todos menos el ultimo
+:empty 
+//ayuda a detectar cuando un elemento esta vacio. //ejemplo .class:empty{background:yellow;} //resaltar
+:nth-child() 
+// tag:nth-child(2){} //afectara al segundo elemento
+*/
+/* MODELO CAJA */
+/* {} */
+/* Elementos que no deben faltar de manera universal ya que estamos receteando los valores predeterminados del navegador*/
+*{
+  box-sizing: border-box;/* Sirve para que el borde se ajuste a la pantalla del usuario*/
+  padding: 0%;/*Iniciamos con todo en 0*/
+  margin: 0%;
+}
+
+
+main {
+width: 100%;/* Ancho */
+height: 500px;/* Largo */
+border: 10px solid red;/* Borde para la caja */
+padding: 20px 35px; /*Padding de 20 pixeles de arriba a abajo y 35 de derecha a izquierda  */
+/* Espacio relleno para alejar los objetos el uno del otro   */
+/* Si quieres puedes ser mas especifico colocando un (padding-left: ;) o un (padding-right: ;) */
+
+
+}

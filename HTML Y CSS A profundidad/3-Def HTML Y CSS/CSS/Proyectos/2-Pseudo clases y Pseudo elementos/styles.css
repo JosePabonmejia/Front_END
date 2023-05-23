@@ -1,0 +1,49 @@
+/* ESTILOS DEL MAIN */
+.main-nav{
+    color: rgb(0, 255, 191);
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 10px;
+    background-color: blueviolet;
+}
+.main-nav__item{
+  display: inline-block;
+}
+/* PSEUDO CLASES */
+.main-nav a {
+ color: rgb(255, 255, 255);
+ padding: 5px;
+ border-radius: 3px;
+ text-decoration: none;
+ background-color: rgb(32, 165, 6);
+}
+/* HOVER sirve como evento: cuando colocamos el maouse sobre el texto se ilumina*/
+.main-nav__item a:hover{
+  color:blueviolet;
+}
+/* ACTIVE sirve como evento: cuando hacemos click el maouse sobre el texto se ilumina*/
+.main-nav__item a:active{
+    color:red;
+  }
+  /*PSEUDO ELEMENTOS */
+.main-nav__item a::after{
+    content: "!";
+}
+/*Algunos Pseudo-classes:
+:root{}
+//representa elemento HTML, con la especificidad de clase //usado para anidar variables CSS
+:active
+//se activa al hacer clic down
+:visited
+//cambio visual cuando se visita un enlace
+:hover
+//permite cambiar el estado de un elemento cuando elmause se sobrepone sobre él
+:first-child // para afectar solo al primer hijo // se coloca en el padre (ul) para afectar a su primer hijo (li)
+:last-child // para afectar solo al ultimo hijo
+:not  //negar una codiciones (ignorar una condicion) //ejemplo .clase:not(last-child)
+//afecto a todos menos el ultimo
+:empty 
+//ayuda a detectar cuando un elemento esta vacio. //ejemplo .class:empty{background:yellow;} //resaltar
+:nth-child() 
+// tag:nth-child(2){} //afectara al segundo elemento
+*/

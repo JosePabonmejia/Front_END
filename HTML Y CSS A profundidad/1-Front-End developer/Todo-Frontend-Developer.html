@@ -1,0 +1,1835 @@
+                                       INTRODUCCION          
+¿Qué es HTML?
+El Lenguaje de Marcado de Hipertexto o HTML por sus siglas en inglés (HyperText Markup Language)
+es el código para construir la estructura de una página web.
+En otras palabras, HTML es el esqueleto con el cual definimos cada elemento que compone la página 
+web, así como: enlaces, párrafos, títulos, botones, imágenes, formularios, entre otros.
+¿Qué es CSS?
+El lenguaje de Hojas de Estilos en Cascada o CSS por sus siglas en inglés (Cascade Style Sheets)
+es el código para describir la presentación de los elementos de la página web, los que definimos 
+con HTML.
+Para qué sirven las herramientas del navegador?
+Las herramientas del navegador son importantes para visualizar lo que ocurre con el código generado. 
+Entre una de la opciones está identificar los elementos que están estructurados en la página web con 
+sus respectivos estilos.
+
+Las herramientas de desarrollador se despliegan con la combinación de teclas F12 / Ctrl + Shift + I 
+/ Cmd + Opt + I o clic derecho e “Inspeccionar” en tu navegador preferido (se recomienda Google Chrome).
+
+¿Cuáles son los motores del navegador?
+Los navegadores tienen sus propios motores: 
+Chrome - Blink, Edge - Edge HTML, Safari - Webkit y Firefox - Gecko. 
+Todos realizan esta compilación de manera diferente, pero con el mismo resultado, es decir, 
+convierten los archivos a píxeles.
+
+Proceso de renderizado del motor del navegador
+El motor del navegador realiza 5 pasos o procesos para compilar nuestro código hasta el renderizado por pantalla. 
+Estos pasos son los siguientes:
+
+Transforma los archivos a un árbol de objetos HTML o CSS, estos se denominan DOM (Document Object Model) y CSSDOM (Cascade Style Sheet Object Model), 
+respectivamente. Cada nodo en el árbol es una representación de los elementos que contiene el archivo HTML o CSS.
+Calcula el estilo correspondiente a cada nodo del DOM relacionado al CSSDOM.
+Calcula las dimensiones de cada nodo y dónde va en la pantalla.
+Pinta o renderiza los diferentes elementos como cajas o contenedores.
+Agrupa todas las cajas en diferentes capas para convertirlas en una imagen que se renderiza en pantalla.
+                                         
+                                          ANATOMIA DE HTML
+¿Cuáles son los elementos HTML?
+Los elementos son cada una de las partes que conforman un archivo HTML. Su estructura contiene:
+
+Etiquetas: es la representación de un elemento HTML. Se dividen en etiquetas de apertura, representadas por <etiqueta>
+y etiquetas de cierre, representadas por </etiqueta>.
+Contenido: es el texto o elementos encerrados por la etiqueta, este valor es opcional en algunas de ellas.
+
+Qué son atributos HTML
+Los atributos HTML son propiedades en la etiqueta de apertura que manejan el comportamiento del elemento. 
+Su valor está envuelto en comillas.
+
+Qué son los elementos vacíos
+Los elementos vacíos son aquellos que únicamente se representan en una etiqueta de apertura. Por ejemplo, 
+la etiqueta de imagen: <img...>.
+
+Qué es el anidamiento de elementos
+El anidamiento de elementos HTML consiste en envolver varias etiquetas en otras etiquetas.
+Interpreta a cada elemento HTML como una caja donde puedes guardar diferentes elementos u otras cajas. 
+Estas cajas tendrán diferentes tamaños y estarán colocadas junto a otras.
+
+Aquellas etiquetas que envuelven a otras se las denomina “padres”. Es decir, <section> es padre de <h1>, <p>, <ul>, 
+y a su vez <ul> es padre de 3 etiquetas <li>.
+Las etiquetas que son el contenido de otras, se las denomina “hijos”. Es decir, las etiquetas <h1>, <p>, <ul> 
+son hijos de <section>, y a su vez las etiquetas <li> son hijos de <ul>.
+
+                              Estructura básica de un documento HTML
+La estructura básica de un documento HTML está configurado por las siguientes etiquetas principales:
+Etiqueta Doctype
+La etiqueta <!DOCTYPE html> especifica que el archivo se maneje con la versión 5 de HTML.
+
+Etiqueta html
+La etiqueta <html> define el elemento raíz de un documento HTML. Todos los demás elementos deben estar contenidos dentro 
+de este elemento raíz. En esta etiqueta se especifica el lenguaje de la página web mediante la propiedad lang.
+
+Etiqueta head
+La etiqueta <head> define la metainformación, es decir, toda información que no es contenido como tal de la página web. 
+Por ejemplo, los enlaces a archivos CSS y JavaScript, el título y la imagen que aparecen en la pestaña del navegador. 
+Esto es importante para motores de búsqueda como Google.
+
+Etiqueta body
+La etiqueta <body> define el contenido de la página web. Debe ser hijo cercano de <html> y padre de todas las etiquetas 
+HTML, excepto por aquellas que definan metainformación.
+
+Comentarios de HTML
+Los comentarios de HTML consiste en señalar algo que se ignorará. Para establecer un comentario HTML se lo envuelve 
+entre <!-- y -->, independiente de la cantidad de líneas.
+
+                                            ¿Qué es HTML semántico?
+El HTML semántico consiste en que cada elemento tenga su propia etiqueta que lo defina correctamente. 
+Sin utilizar etiquetas muy generales, como <div> o <span>.
+
+El problema con la etiqueta div
+La etiqueta div define un bloque genérico de contenido, que no tiene ningún valor semántico. 
+Se utiliza para elementos de diseño como contenedores.  
+
+
+¿Cuáles son las etiquetas semánticas?
+
+Las etiquetas semánticas para definir una interfaz de una página web son:
+
+<header>: define el encabezado de la página (no confundir con <head>).
+<nav>: define una barra de navegación que incluye enlaces.
+<section>: define una sección de la página.
+<footer>: define un pie de página o de sección.
+<article>: define un artículo, el cual puede tener su propio encabezado, navegación, sección o pie de página.
+Ahora que ya conoces las etiquetas semánticas, evita el uso excesivo de <div>.
+
+                                          ETIQUETAS HTML MAS USADAS
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas mas utilizasdas</title>
+</head>
+<body>
+    <!-- LAYOUT Osea diceño de toda la pagina-->
+    <header></header><!-- Cabeza -->
+    <main></main><!-- Parte mas importante -->
+    <nav></nav><!-- Navegador -->
+    <section></section><!-- seccion -->
+    <article></article><!-- Article -->
+    <aside></aside><!--  -->
+    <footer></footer><!-- Comentarios -->
+    <!-- ENLACES -->
+    <a href=""></a><!-- Para muestra un valor texto y puede ser seleccionado con click -->
+    <!-- TEXTOS --> 
+    <h1>Soy un titulo</h1>
+    <p>Soy un parrafo</p>
+    <span>Soy un span </span><!-- Se utiliza mas con metodos de trasferencia de datos al parrafo que queremos-->
+     <!-- IMAGENES Y VIDEO  -->
+     <img src="" alt="">
+     SVG
+     <iframe src="" frameborder="0"></iframe>
+     <video src=""></video>
+     <!-- FORMULARIOS -->
+     <form action="">
+        <label for="Name"></label>
+            <input type="Name">
+        
+     <button></button>
+     </form>
+     <!-- LISTAS -->
+     <ul></ul>
+     <li></li><!-- Lista desordenada -->
+     <ol></ol><!-- Lista ordenada -->
+</body>
+</html>
+
+                       Anatomía de una declaración CSS: selectores, propiedades y valores
+Qué es una declaración de CSS
+Una declaración de CSS es un bloque que especifica el conjunto de estilos que se añadirán a un elemento HTML. 
+Su estructura contiene lo siguiente:
+                       
+Selector: define el elemento o conjunto de elementos a los cuales se añadirán los estilos.
+Propiedad: es el nombre del estilo de CSS.
+Valor: es el valor que tomará la propiedad.
+
+Qué son comentarios de CSS
+Los comentarios de CSS consisten en señalar algo que se ignorará. Para establecer un comentario CSS se lo envuelve entre 
+/* y */, independiente de la cantidad de líneas.
+
+Propiedades iniciales de CSS
+Antes de empezar con CSS utilizaremos algunas propiedades de CSS.
+
+color: establece el color del texto de un elemento.
+background-color: establece un color de fondo al elemento.
+font-size: establece el tamaño de la fuente.
+width: establece la anchura de un elemento.
+height: establece la altura de un elemento.
+Medidas iniciales
+Estas son las medidas iniciales que debes conocer para establecer tamaños de elementos o de tipografía:
+
+px: establece una longitud de píxeles.
+%: establece un porcentaje con respecto a una medida base.
+
+                                               SELECTORES BASICOS
+De tipo  <div>
+De clase .elemento{}
+De ID #id-elemento{}
+De atributo a[href="...."]{}
+Universal *{....}
+
+                                            SLECTORES COMBINADORES
+Descendiente  Div p{}
+Hijo directo  Div > p{}
+Elemento adyacente Div + p{}
+General de hermanos Div ~ p{} 
+
+Cuáles son los selectores combinadores
+Un selector combinador es la unión de dos o más selectores básicos.
+
+1. Combinador de descendientes
+Selecciona todos los elementos del selector de la derecha que son hijos del selector de la izquierda, 
+independientemente de la profundidad. Estos selectores están separados por un espacio.
+
+padre hijos {
+    /* Todos los hijos del padre */
+}
+
+div p{
+    /* Todos los hijos <p> de <div>*/
+}
+
+.container img{
+    /* Todos los hijos <img> de la clase "container"*/
+}
+2. Combinador de hijo directo
+Selecciona todos los elementos del selector de la derecha que son hijos directos del selector de la izquierda. 
+Estos selectores están separados por >.
+
+padre > hijos_directos {
+    /* Todos los hijos directos del padre */
+}
+
+div > p{
+    /* Todos los hijos directos <p> de <div>*/
+}
+
+.container > img{
+    /* Todos los hijos directos <img> de la clase "container"*/
+}
+
+3. Combinador de elemento adyacente
+Selecciona todos los elementos del selector de la derecha que están adyacente al selector de la izquierda. 
+Estos selectores están separados por +.
+elemento + adyacente {
+    /* Elementos adyacentes */
+}
+
+div + p{
+    /* Todos los <p> adyacentes a <div>*/
+}
+
+.container + img{
+    /* Todos los <img> adyacentes a la clase "container"*/
+}
+Adyacente significa que comparten el mismo padre y está situado inmediatamente hacia abajo de otro elemento. 
+Por ejemplo, en el siguiente código, <div> está adyacente a <h1> y <p> está adyacente a <div>. Sin embargo, 
+    <h1> no está adyacente a <div> y <div> no está adyacente a <p>.
+<!--archivo HTML -->
+<h1>Soy un título </h1>
+<div>Soy un div</div>
+<p>Soy un párrafo</p>
+
+4. Combinador general de hermanos
+Selecciona todos los elementos del selector de la derecha que son hermanos del selector de la izquierda.
+Estos selectores están separados por ~.
+elemento ~ hermanos {
+    /* Elementos hermanos */
+}
+
+div ~ p{
+    /* Todos los <p> hermanos de <div>*/
+}
+
+.container ~ img{
+    /* Todos los <img> hermanos de la clase "container"*/
+}
+Hermanos significa que comparten el mismo padre y están situados hacia abajo de otro elemento. Por ejemplo, 
+en el siguiente código, <div> y <p> son hermanos de <h1>, pero <h1> no es hermano de <div> y <p>.
+    <!--archivo HTML -->
+<h1>Soy un título </h1>
+<div>Soy un div</div>
+<p>Soy un párrafo</p>
+
+                                 Cuáles son las pseudoclases
+Una pseudoclase define el estilo de un estado especial de un elemento.
+Sintaxis
+selector : pseudoclase { 
+    propiedad: valor;
+}
+:hover
+Representa el estado en el cual el cursor está encima del elemento.
+Ejemplo:
+<html><div>Señálame</div></html>
+CSS:div {
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  div:hover {
+    color: red;
+  }
+
+:active
+Representa el estado de un elemento que no ha sido visitado.
+Ejemplo:
+<html><a href="#">Clickeame</a></html>
+CSS:a {
+    font-size: 3rem;
+  }
+  a:link {
+    color: red;
+  }
+
+:visited
+Representa el estado de un elemento que ya ha sido visitado.
+Ejemplo:
+<html><a href="#">Clickeame</a></html>
+CSS:a {
+    font-size: 3rem;
+  }
+  a:visited {
+    color: red;
+  }
+
+:not()
+Representa el estado en el cual no coinciden los selectores que se indiquen.
+Ejemplo:
+<html><div>Azul</div>
+<div>Azul</div>
+<div class="negro">Negro</div>
+<div>Azul</div>
+<div>Azul</div></html>
+CSS:div {
+    font-size: 3rem;
+  }
+  
+  div:not(.negro) {
+    color: blue;
+  }
+
+:nth-child()
+Representa el estado en el cual coinciden los hijos del elemento según el valor indicado.
+Ejemplo:
+<html><div>1 Negro</div>
+<div>2 Azul</div>
+<div>3 Negro</div>
+<div>4 Negro</div>
+<div>5 Negro</div></html>
+CSS:div {
+    font-size: 3rem;
+  }
+  
+  div:nth-child(2) {
+    color: blue;
+  }
+
+Valores de palabras clave:
+
+odd: los elementos hijos en posiciones impares.
+even: los elementos hijos en posiciones pares.
+Fórmula matemática: An+B donde A y B son números enteros.
+
+Cuáles son los pseudoselementos
+Un pseudoelemento define el estilo de una parte específica de un elemento.
+Sintaxis
+selector :: pseudo-elemento { 
+    propiedad: valor;
+}
+
+::before
+Sirve para agregar un contenido antes del elemento. El contenido es agregado mediante la propiedad content de CSS.
+
+Ejemplo:
+<html><h1>Título</h1>
+<h2>Subtítulos</h2>
+<h2>Subtítulos</h2>
+<h2>Subtítulos</h2>
+<h2>Subtítulos</h2>
+<h2>Subtítulos</h2>
+</html>
+CSS:h2:before {
+    content: " * ";
+    color: red;
+  }
+
+::after
+Sirve para agregar un contenido después del elemento. El contenido es agregado mediante la propiedad content de CSS.
+
+Ejemplo:
+<html><!-- Navbar improvisada -->
+<nav>
+  <ul>
+    <li>Home</li>
+    <li>Destacados</li>
+    <li>Elementos</li>
+    <li>Clases</li>
+    <li>Más...</li>
+  </ul>
+</nav>
+</html>
+CSS:nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+  
+  nav ul li::after {
+    content: "|";
+    margin: 1rem;
+    color: red;
+  }
+
+::first-letter
+Sirve para añadir estilos a a la primera letra del texto de cualquier elemento.
+
+Ejemplo:
+<html><p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p></html>
+CSS:::first-letter{
+    color: red;
+  }
+                                        Cascada y especificidad en CSS  
+En algún punto, cuando estés creando una página web, te encontrarás con problemas con los estilos, por ejemplo:
+
+¿Por qué no se aplica el color que le estoy poniendo?
+¿Por qué este elemento se comporta de manera diferente?
+Probablemente, sea un inconveniente de cascada o especificidad.
+                                        
+Qué es la cascada en CSS
+La cascada es el concepto que determina qué estilos se colocan sobre otros, priorizando a aquellos que se encuentren más 
+abajo del código. Recordarás que CSS es la abreviación de Cascade Style Sheets, que traducido es hojas de estilos en 
+Cascada.
+<h1>Cascada</h1>
+h1 {
+    color: red;
+}
+
+h1 {
+    color: blue;
+}
+
+La etiqueta <h1> tendrá un color blue de letra, esto porque está situado más abajo en el código. 
+Esto ocurre con cada propiedad de CSS que se repita en algún punto más arriba del código.
+
+Sin embargo, esto ocurre cuando la especificidad de una regla CSS tiene el mismo valor. Pero, ¿qué es especificidad?
+
+Qué es especificidad en CSS
+
+La especificidad consiste en dar un valor a una regla CSS sobre qué tan específico es el estilo, esto para que los navegadores 
+puedan saber qué estilos aplicar sobre otros, independientemente de dónde se encuentren en el código. 
+El estilo se aplicará donde la especificidad sea mayor.
+
+Tipos de especificidad en CSS
+
+Existen 6 tipos de especificidad con su respectivo valor, donde X es la cantidad de estilos que lo contienen. 
+
+10000 IMPORTANT 
+ 1000 Estilos en linea 
+  100 #id 
+   10 Clases, Atributos y pseudoclases
+    1 Elementos y pseudoelementos 
+    0 Selector universal 
+
+                              Tipos de display más usados: block, inline e inline-block
+La propiedad display establece el tipo de visualización de los elementos HTML sin afectar el flujo normal de los elementos.
+Existen etiquetas que por defecto su display ya está determinado, como la etiqueta <div> que tiene display block, <span> tiene display inline y <button> tiene display inline-block.
+
+    Abordaremos los tipos de display block, inline e inline-block a continuación.
+    
+Visualización en bloque (block)
+    El display block **establece que un elemento ocupará todo el espacio disponible por defecto y el siguiente elemento a este se situará por debajo.
+    
+    Es posible añadir medidas de anchura width y altura height a estos a elementos.
+    
+    También es posible agregar todas las propiedades del modelo de caja (no te preocupes de este concepto, ya lo abordaremos).
+Ejemplo 
+<HTML>
+    <div>Soy display block</div>
+<div>Soy display block</div>
+<div class="con_medidas">Soy display block</div>
+</HTML>
+CSS:/* Quita los comentarios y observa el comportamiento */
+div{
+  background-color: aqua;
+  /* margin: 10px; */
+  /* padding: 10px; */
+}
+
+.con_medidas {
+  /* width: 200px; */
+  /* height: 200px; */
+}
+
+/* Ignora estos estilos, por ahora */
+* {
+  font-size: 1.2rem;
+  margin: 0;
+}
+Visualización en línea (inline)
+El display inline establece que un elemento ocupará el espacio del contenido del mismo y el siguiente elemento se situará 
+a la derecha.
+
+No es posible añadir medidas de anchura width y altura height a estos a elementos.
+
+También, no es posible agregar todas las propiedades del modelo de caja, únicamente funcionará la propiedad margin en 
+el eje horizontal (no te preocupes de este concepto, ya lo abordaremos).
+<html><span>Soy display inline</span>
+<span>Soy display inline</span>
+<span>Soy display inline</span>
+<span>Soy display inline</span>
+<span class="con_medidas">Soy display inline</span>
+</html>
+CSS:/* Quita y agrega los comentarios y observa el comportamiento */
+span{
+  background-color: aqua;
+  /* margin: 20px; */
+  /* padding: 20px; */
+}
+
+.con_medidas {
+  /* width: 200px; */
+  /* height: 200px; */
+}
+
+/* Ignora estos estilos, por ahora */
+* {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+Visualización de bloque y línea (inline-block)
+El display inline-block combina las ventajas de bloque de colocar medidas al elemento y propiedades del modelo de caja 
+correctamente; con las ventajas de inline de color un elemento seguido de otro en el mismo espacio.
+
+Si elemento excede el contenido total, se coloca en la siguiente línea por debajo.
+<html><button>Soy display inline-block</button>
+<button>Soy display inline-block</button>
+<button>Soy display inline-block</button>
+<button>Soy display inline-block</button>
+<button class="con_medidas">Soy display inline-block</button>
+
+</html>
+CSS: /* Quita los comentarios y observa el comportamiento */
+button{
+  /* margin: 10px; */
+  /* padding: 10px; */
+}
+
+.con_medidas {
+  /* width: 300px; */
+  /* height: 100px; */
+}
+
+/* Ignora estos estilos, por ahora */
+* {
+  font-size: 1.1rem;
+  margin: 0;
+}
+Visualización nula (none)
+El display none desactiva la visualización de un elemento, como si el elemento no existiera.
+<html><div></div>
+<div></div>
+<div class="desaparecer">
+  En mi siguiente truco, ¡voy a desaparecer!
+</div>
+<div></div>
+<div></div>
+</html>
+CSS: /* Quita los comentarios y observa el comportamiento */
+.desaparecer{
+  /* display: none; */
+  background-color: cornflowerblue;
+  
+}
+
+/* Ignora estos estilos, por ahora */
+* {
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+body{
+  display: flex;
+}
+
+div{
+  background-color: coral;
+  width: 120px;
+  height: 120px;
+  font-weight: 800;
+  padding: 8px;
+}
+                                                flexbox y CSS grid
+El display flex y grid son formas de visualización de elementos recientes y cada uno tienen sus propias características 
+para crear interfaces de manera efectiva, a partir de un contenedor padre que dotará a los elementos hijos de 
+superpoderes del posicionamiento.
+
+Ambas son herramientas muy útiles en el desarrollo, especialmente para la creación de interfaces amigables al usuario 
+y aptas para cualquier dispositivo, que este último se lo conoce como responsive design.
+
+Sin embargo, ambas herramientas tienen temas muy extensos de entender, y como mi intención no es estresarte con demasiada 
+información, simplemente ten presente de manera general en qué consisten.
+
+Qué es flexbox
+Flexbox consiste en el ordenamiento de elementos hijos en un solo eje, por defecto horizontalmente. 
+El elemento padre o contenedor deberá contener la propiedad display con el valor flex. A partir de aquí, 
+ya puedes ordenar los hijos según sea necesario.
+
+<html><div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  
+  </html>
+CSS: * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Quita los comentarios y observa el comportamiento */
+  .container{
+    /* display: flex; */
+  }
+  
+  .container div {
+    width: 100px; 
+    height: 100px;
+  }
+  
+  .container div:nth-child(2n){
+    background-color: aqua;
+  }
+  
+  .container div:nth-child(2n+1){
+    background-color: brown;
+  }
+  
+  Qué es grid
+  Grid consiste en el ordenamiento de elementos hijos en dos ejes, como si fuera una cuadrícula o tabla. 
+  El elemento padre o contenedor deberá contener la propiedad display con el valor grid y debes definir las medidas de 
+  las columnas y de las filas. A partir de aquí, ya puedes ordenar los hijos según sea necesario.  
+
+  <html><div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div></html>
+  CSS: * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Quita los comentarios y observa el comportamiento */
+  .container{
+  
+    /*display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px; */
+    
+  }
+  .container div {
+    width: 100px; 
+    height: 100px;
+  }
+  .container div:nth-child(2n)//ELEMENTOSPARES{
+    background-color: aqua;
+  }
+  .container div:nth-child(2n+1)//ELEMENTOS IMPARES{
+    background-color: brown;
+  }
+
+  Modelo de caja 
+  Si entras a las herramientas de desarrollador de tu navegador y señalas un elemento HTML, en la sección de 
+  estilos te aparecerá una vista parecida a la anterior imagen, este es el modelo de caja del elemento señalado.
+  
+  Si entras a las herramientas de desarrollador de tu navegador y señalas un elemento HTML, en la sección de 
+  estilos te aparecerá una vista parecida a la anterior imagen, este es el modelo de caja del elemento señalado.
+  
+  div {
+    width: 100px;
+    height: 100px;
+}
+
+Qué son los bordes del elemento HTML
+El border consiste en el perfil o borde de un elemento HTML. Si imaginamos una caja, sería la caja en sí. 
+Para definir un borde es necesario utilizar las siguientes tres propiedades:
+
+border-color: establece el color del borde.
+border-style: establece el estilo propio del borde, estos pueden ser: none (sin borde), dotted (puntos), 
+dashed (guiones), solid (continuo), double (doble continuo), groove (recuadro).
+border-width: estable la anchura del borde.
+También se puede establecer los tres valores en una sola propiedad border donde no importa el orden.
+
+div {
+    border: [color] [style] [width];
+}
+
+div {
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+}
+
+También estableciendo de manera individual los valores de cada posición:
+div {
+    border-top: 5px solid blue;
+    border-bottom: 5px solid red;
+    border-left: 5px solid black;
+    border-right: 5px solid yellow;
+  }
+  Qué es el espaciado interno del elemento HTML o padding
+El padding consiste en el espacio entre el borde y el contenido del elemento HTML. Si imaginamos una caja,
+ este valor sería el espacio entre la caja y lo que deseas guardar.
+ div {
+    padding: 100px;
+}
+Puedes establecer el padding en cada posición en una sola línea de las siguientes maneras:
+
+padding: [arriba] [derecha] [abajo] [izquierda], siguiendo el sentido horario.
+padding: [arriba] [derecha e izquierda] [abajo], siguiendo el eje principal.
+padding: [arriba y abajo] [derecha e izquierda], siguiendo los ejes del elemento.
+También estableciendo de manera individual los valores de cada posición:
+div {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+Qué es el espaciado externo del elemento HTML o margin
+El margin consiste en el espacio entre el borde y otro elemento HTML. Si imaginamos una caja, 
+es el espacio entre tu caja y otra caja.
+div {
+    margin: 10px;
+}
+Puedes establecer el margin en cada posición en una sola línea de las siguientes maneras:
+
+margin: [arriba] [derecha] [abajo] [izquierda], siguiendo el sentido horario.
+margin: [arriba] [abajo] [derecha e izquierda], siguiendo el eje principal.
+margin: [arriba y abajo] [derecha e izquierda], siguiendo los ejes del elemento.
+También estableciendo de manera individual los valores de cada posición:
+
+div { margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+Qué son los valores por defecto
+Por defecto, el navegador establece valores iniciales a algunas propiedades CSS, este es el caso de margin y 
+padding. Una buena práctica es utilizar el selector universal para restablecer estos valores a 0, para que no 
+surjan errores inesperados.
+
+* {
+    margin: 0;
+    padding: 0;
+}
+Qué es el tamaño total del elemento
+El tamaño total del elemento está determinado por la suma de los valores de las propiedades border padding y 
+widtho height, dependiendo del eje. La propiedad margin no está incluida en este cálculo.
+
+Por ejemplo, definimos los siguientes estilos:
+
+div{
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  border: 10px solid gray;
+  margin: 30px;
+}
+
+El tamaño total del elemento será de 210px en ambos ejes, donde la suma fue: 150 (altura/anchura) + 20 x 2 
+(padding ambos lados) + 10 x 2 (borde ambos lados). Si evaluamos este elemento en las herramientas del 
+desarrollador mostrará su tamaño como 210x210.
+
+Medidas totales de un elemento HTML
+Aunque se conozca las medidas de los elementos de esta manera, no siempre existirá un control total.
+ Por lo que podríamos establecer el tamaño total del elemento con width y height, y no solo del contenido, añadiendo la propiedad box-sizing.
+
+Propiedad box-sizing
+La propiedad box-sizing establece cómo se calculará el width y el height si incluyen bordes y espacios internos. Como buena práctica, se lo coloca en el selector universal, para que todos los elementos sigan esta tendencia.
+* {
+    box-sizing: border-box;
+  }
+
+  Con el valor border-box, el tamaño total del elemento será igual al especificado en el width y height, provocando que las medidas del contenido cambien con respecto a los bordes y espacios internos.
+
+  Por ejemplo, con los estilos que definimos anteriormente, establezcamos esta nueva propiedad.
+  El tamaño total del elemento será de 150px en ambos ejes, donde se calcularon las medidas del contenido para 
+  que la suma total sea lo especificado en el width y height. Si evaluamos este elemento en las herramientas 
+  del desarrollador mostrará su tamaño total como 150x150 y el contenido como 90x90.
+
+  Conclusión, establece las medidas totales del elemento con width y height, junto con box-sizing: border-box, para que el contenido se adecue a las necesidades del contenedor.
+
+¿Cuál es el problema con el tamaño de los bordes?
+Recapitulando, el tamaño total de un elemento es la suma de tres: el borde, el espacio interior y el contenido.
+
+Entonces, en algunas ocasiones tendrás la intención de añadir un borde al realizar un hover. Esto provocará 
+que el elemento necesite más espacio del inicial, en un contenedor con más elementos puede ocasionar un 
+conflicto.
+
+Mira el siguiente ejemplo, e intenta poner el cursor sobre un elemento ¿qué sucede?
+
+<html><div>Lorem ipsum dolor sit amet consectetur adipisicing eliti</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing eliti</div>
+</html>
+css: /* Quita los comentarios y observa lo que ocurre */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div{
+  display: inline-block;
+  background-color: greenyellow;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  margin: 30px;
+}
+
+div:hover{
+  border: 10px solid gray;
+  cursor: pointer;
+}
+
+Observaste este comportamiento, debes tener cuidado con lo que agregas porque puedes provocar errores.
+
+La solución a esto es colocar un borde de color transparent (transparente) y del mismo tamaño que el otro borde.
+Esto hará que el elemento se mantenga en su tamaño total, lo único que cambia es el color.
+
+<html><div>Lorem ipsum dolor sit amet consectetur adipisicing eliti</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing eliti</div>
+</html>
+
+css:/* Quita los comentarios y observa lo que ocurre */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div{
+  display: inline-block;
+  background-color: greenyellow;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  margin: 30px;
+  /* border: 10px solid transparent; */
+}
+
+div:hover{
+  border: 10px solid gray;
+  cursor: pointer;
+}
+
+Posicionamiento en CSS
+El posicionamiento en CSS consiste en cómo un elemento se situará, con respecto a su elemento padre y al flujo 
+normal del documento. El flujo normal del documento es el orden de los elementos establecidos en el HTML.
+
+La posición del elemento se la define con la propiedad position, mediante los siguientes valores:
+
+static
+relative
+absolute
+sticky
+
+Propiedades de posición
+Además de la propiedad position, existen cuatro propiedades del elemento de acuerdo a su posición con respecto 
+a su padre, estas son: top (arriba), bottom (debajo), left (izquierda) y right (derecha).
+div {
+  top: 10px;
+  bottom: 15px;
+  left: 20px;
+  right: 10px;
+}
+Estos valores estarán establecidos en el padre próximo que tenga la posición relative.
+
+Si top y bottom están definidos, top gana. Si left y rigth están definidos, left gana (dependiendo el idioma configurado).
+
+Posición estática
+La posición static es el valor por defecto de todo elemento HTML, consiste en respetar el flujo normal del 
+documento donde las propiedades de posición no pueden ser establecidas.
+<html><div class="container">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div></html>
+CSS: * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+
+}
+
+/* Quita los comentarios y observa el comportamiento */
+.container div {
+  width: 100px; 
+  height: 100px;
+/* 
+  top: 10px;
+  bottom: 15px;
+  left: 20px;
+  right: 10px; 
+  */
+}
+
+.container div:nth-child(2n){
+  background-color: aqua;
+}
+
+.container div:nth-child(2n+1){
+  background-color: brown;
+}
+
+Posición relative
+La posición relative consiste en respetar el flujo normal del documento donde las propiedades de posición sí pueden ser 
+establecidas.
+<html>
+  <div class="container">
+    <div class="relative"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+}
+
+.container div {
+  width: 100px; 
+  height: 100px;
+}
+
+/* Quita los comentarios y observa el comportamiento */
+.container .relative{
+  /* position: relative; */
+  /* top: 50px; */
+  /* left: 50px; */
+}
+
+.container div:nth-child(2n){
+  background-color: aqua;
+}
+
+.container div:nth-child(2n+1){
+  background-color: brown;
+}
+
+Posición absoluta
+La posición absolute consiste en quitar al elemento del flujo normal del documento donde las propiedades de posición 
+sí pueden ser establecidas.
+
+En el siguiente ejemplo, observa que pasa con el primer elemento con respecto a los demás.
+
+<html>
+  <div class="container">
+  <div class="absolute">1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+
+/* Importante el position */
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.container div {
+  width: 100px; 
+  height: 100px;
+}
+
+/* Quita los comentarios y observa el comportamiento */
+.container .absolute{
+  /* position: absolute; */
+  /* left: 150px; */
+  /* top: 50px; */
+}
+
+.container div:nth-child(2n){
+  background-color: aqua;
+}
+
+.container div:nth-child(2n+1){
+  background-color: brown;
+}
+
+Habrás notado que el elemento “2” desaparece, pero en realidad lo que sucede es que sitúa por detrás del elemento con posición 
+absoluta que salió del flujo normal del documento. Este comportamiento se debe al eje Z de la pantalla y al contexto de 
+apilamiento.
+
+Elemento padre más próximo con posición relativa
+El elemento con posición absoluta se desplazará arriba, abajo, izquierda o derecha con respecto al elemento padre más próximo 
+con posición relativa.
+
+Si no existe un padre con posición relativa de un elemento con posición absoluta, este se desplazará con respecto al elemento 
+raíz del documento.
+
+En el siguiente ejemplo, te encontrarás varios contenedores padres, incluso las etiquetas <html> y <body>. Sigue los pasos y
+observa el comportamiento. Ignora los estilos iniciales, simplemente sirven para establecer la estructura del ejercicio.
+<html>
+  <p>Body</p>
+<div class="abuelo">
+  <p>Abuelo</p>
+  <div class="padre">
+    <p>Padre</p>
+    <div class="hijo">
+      <p>Hijo</p>
+    </div>
+  </div>
+</div>
+</html>
+CSS
+/* El ejercicio está hasta abajo */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html{
+  margin: 20px;
+  border: 1px red solid;
+}
+
+body {
+  margin: 20px;
+  background-color: wheat;
+  border: 1px black solid;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+
+}
+
+.abuelo{
+  width: 100%;
+  height: 100vh;
+  background-color: yellowgreen;
+}
+
+.padre{
+  width: 75%;
+  height: 75%;
+  background-color: cadetblue;
+}
+
+.hijo{
+  width: 150px;
+  height: 150px;
+  background-color: rosybrown; 
+}
+
+
+/* Lo único que quiero que entiendas es que hay 3 contenedores, los cuáles 
+/* Quita los comentarios y observa el comportamiento */
+
+
+.hijo {
+  /* position: absolute; */
+  /* top: 0; */
+}
+
+/* ¿ Por qué sucedió esto ? */
+
+html {
+  /* position: relative; */
+}
+
+body {
+  /* position: relative; */
+}
+
+.abuelo{
+  /* position: relative; */
+}
+
+.padre {
+  /* position: relative; */
+}
+
+/* ¿ Ahora entendiste ? */
+
+Como pudiste observar, en el elemento con posición absoluta, su desplazamiento se basa con relación al elemento padre más 
+próximo con posición relativa.
+
+Posición fija
+La posición fixed consiste en quitar al elemento del flujo normal del documento y fijarlo en un lugar; donde las propiedades
+de posición sí pueden ser establecidas.
+
+En el siguiente ejemplo, desplázate por el documento, observa el comportamiento antes y después de colocar la posición fija.
+
+<html>
+  <nav>De grande quiero ser una barra de navegación</nav>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+/* Desplázate por el documento y después quita los comentarios y observa el comportamiento */
+
+nav {
+  /* position: fixed; */
+  /* top: 0; */
+  background-color: cornflowerblue;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+p {
+  padding: 10px;
+}
+Posición variable fija
+La posición sticky consiste en quitar al elemento del flujo normal del documento y fijarlo en un lugar mientras su contenedor 
+sea visible; donde las propiedades de posición sí pueden ser establecidas.
+
+En el siguiente ejemplo, desplázate por el documento, observa el comportamiento antes y después de colocar la posición variable 
+fija.
+<html>
+  <div>
+    <p>Soy un párrafo 1</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 2</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 3</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 4</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 5</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 6</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 7</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 8</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 9</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 10</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+  </div>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+/* Desplázate por el documento y después quita los comentarios y observa el comportamiento */
+
+p {
+  /* position: sticky; */
+  /* top: 0; */
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+
+li {
+  margin: 20px 30px;
+}
+
+Z-index y el contexto de apilamiento
+Qué son los planos y ejes
+El navegador está constituido de tres planos y ejes: el ancho o X; el alto o Y; y el de profundidad o Z.
+
+El eje X positivo está hacia la derecha; el eje Y positivo está hacia abajo; y el eje Z positivo está hacia el usuario.
+Qué es la propiedad z-index
+El contexto de apilamiento se configura con la propiedad z-index.
+
+Por defecto, todos los elementos tienen un valor auto, es decir, el orden está definido por la estructura del HTML. 
+Los primeros elementos estarán detrás y los últimos estarán de frente.
+
+Si se establece un valor positivo, este elemento se sitúa por delante de los demás. Si se establece un valor negativo, 
+se sitúa por detrás.
+
+Si un elemento tiene un z-index mayor a otro, estará por delante. Sin embargo, si un elemento que tiene un z-index menor a otros, 
+sus hijos nunca estarán por encima, aunque su z-index sea mayor.
+
+<html>
+  <div class="red">Red</div>
+<div class="blue">Blue
+  <div class="yellow">
+    Yellow (hijo de blue)
+  </div>
+</div>
+</html>
+CSS
+/* Quita los comentarios y observa el resultado */
+
+div {
+  /* position: absolute; */
+}
+
+.red{
+  /* z-index: 5; */
+  /* top: 50px; */
+}
+
+.blue{
+  /* z-index: 4; */
+  /* left: 50px; */
+}
+
+.yellow{
+  /* z-index: 6; */
+  /* right: -20px; */
+  /* top: 40px; */
+}
+
+
+/* Ignora los siguientes estilos */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+.red{
+  background-color: rgb(246, 108, 108);
+}
+
+.blue{
+  background-color: rgb(102, 102, 249);
+}
+
+.yellow{
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+}
+Z-index y el contexto de apilamiento
+El contexto de apilamiento consiste en la superposición de capas o elementos a lo largo del eje Z del navegador. 
+Esto es importante para evitar que un elemento esté ocultando a otro.
+
+Qué son los planos y ejes
+El navegador está constituido de tres planos y ejes: el ancho o X; el alto o Y; y el de profundidad o Z.
+
+El eje X positivo está hacia la derecha; el eje Y positivo está hacia abajo; y el eje Z positivo está hacia el usuario.
+
+Estos son muy importantes para mover los elementos del HTML desde un punto inicial hacia un punto final.
+
+Qué es la propiedad z-index
+
+El contexto de apilamiento se configura con la propiedad z-index.
+
+Por defecto, todos los elementos tienen un valor auto, es decir, el orden está definido por la estructura del HTML. 
+Los primeros elementos estarán detrás y los últimos estarán de frente.
+
+Si se establece un valor positivo, este elemento se sitúa por delante de los demás. Si se establece un valor negativo, 
+se sitúa por detrás.
+
+Si un elemento tiene un z-index mayor a otro, estará por delante. Sin embargo, si un elemento que tiene un z-index menor a otros, 
+sus hijos nunca estarán por encima, aunque su z-index sea mayor.
+
+<html>
+  <div class="red">Red</div>
+<div class="blue">Blue
+  <div class="yellow">
+    Yellow (hijo de blue)
+  </div>
+</div>
+</html>
+CSS
+/* Quita los comentarios y observa el resultado */
+
+div {
+  /* position: absolute; */
+}
+
+.red{
+  /* z-index: 5; */
+  /* top: 50px; */
+}
+
+.blue{
+  /* z-index: 4; */
+  /* left: 50px; */
+}
+
+.yellow{
+  /* z-index: 6; */
+  /* right: -20px; */
+  /* top: 40px; */
+}
+
+
+/* Ignora los siguientes estilos */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+.red{
+  background-color: rgb(246, 108, 108);
+}
+
+.blue{
+  background-color: rgb(102, 102, 249);
+}
+
+.yellow{
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+}
+/* Quita los comentarios y observa el resultado */
+
+div {
+  /* position: absolute; */
+}
+
+.red{
+  /* z-index: 5; */
+  /* top: 50px; */
+}
+
+.blue{
+  /* z-index: 4; */
+  /* left: 50px; */
+}
+
+.yellow{
+  /* z-index: 6; */
+  /* right: -20px; */
+  /* top: 40px; */
+}
+
+
+/* Ignora los siguientes estilos */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+.red{
+  background-color: rgb(246, 108, 108);
+}
+
+.blue{
+  background-color: rgb(102, 102, 249);
+}
+
+.yellow{
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+}
+
+Como puedes observar en la imagen, el elemento con la clase yellow tiene un z-index mayor a red, pero no está por encima, 
+porque su contexto de apilamiento está dentro del contexto de apilamiento del elemento blue, así mismo, nunca estará por 
+detrás de su elemento padre.
+
+            Las propiedades CSS más usadas son las siguientes, separadas en secciones comunes, algunas ya las conocemos:
+
+Display
+Margin
+Padding
+Border
+Width
+Height
+Color
+Background
+
+                            Propiedades de textos
+Las propiedades para manipular los textos y tipografía son los siguientes:
+
+font-size: establece un tamaño de fuente.
+font-weight: establece el resaltado del texto, con valores de 100 a 900 en intervalos de 100; donde 100 es delgada y 900 es negrita.
+font-family: establece el tipo de fuente.
+text-align: establece la posición del texto: right, left, center y justify.
+color: establece el color del texto.
+
+Bordes redondeados
+La propiedad que establece bordes redondeados es: border-radius.
+
+Unidades de medida
+Las unidades de medida establecen una longitud para un determinado elemento o tipografía. Existen dos tipos de medidas: absolutas y relativas.
+
+Qué son las medidas absolutas
+Las medidas absolutas son valores fijos, por lo que la medida no cambiará. La unidad absoluta más utilizada son los píxeles px, las demás son muy poco utilizadas, 
+pero es bueno que las conozcas.
+
+Unidad	Nombre	Equivalencia
+px	píxeles	1 px = 1/96 in
+cm	centímetros	1 cm = 96/2.54 px
+mm	milímetros	1 mm = 1/10 cm
+Q	cuartos de milímetros	1 Q = 1/4 mm
+in	pulgadas	1 in = 2.54 cm = 96 px
+pc	picas	1 pc = 1/6 in
+pt	puntos	1 pt = 1/72 in
+
+Qué son las medidas relativas
+Las medidas relativas son valores variables, por lo que la medida depende de un valor externo. 
+Se debe tener en cuidado con estas porque un pequeño cambio puede desencadenar tamaños muy elevados.
+
+Unidad	Depende de
+em	el elemento que lo contiene
+rem	el elemento raíz
+vw	1% del ancho de la pantalla (view width)
+vh	1% de la altura de la pantalla (view height)
+vmin	1% de la dimensión más pequeña de la pantalla
+vman	1% de la dimensión más grande de la pantalla
+ch	anchura del caracter “0” del elemento que lo contiene
+lh	altura de la línea del elemento que lo contiene
+
+Diferencia entre rem y em
+La medida em depende del elemento que lo contiene, es decir, si un elemento tiene font-size de 20px, el valor de em es igual a 20px, 
+el valor de 2em será de 40px y así sucesivamente.
+
+La medida rem depende del elemento raíz, el valor del font-size del elemento raíz es de 16px, por lo tanto, el valor de 2rem es igual a 32px, 
+y así sucesivamente.
+
+                          Diferencia entre porcentajes y la anchura y altura de la pantalla
+
+Los porcentajes representan el tamaño con respecto al total del elemento padre. Si el elemento padre tiene 20px, entonces el 100% será de 20px.
+
+Por otra parte, las medidas de anchura vw y altura vh representan el tamaño con respecto al total de la pantalla. Si el elemento tiene un tamaño de 100vw 
+será el 100 por ciento de la pantalla.
+
+Si un elemento tiene todo el tamaño de la pantalla, entonces solamente en ese punto la medida 100% será igual a 100vw o 100vh.
+
+Problema con las medidas de texto
+
+Los navegadores tienen una opción para cambiar el tamaño del texto. Con medidas absolutas, el tamaño de la letra no cambiará, por lo que será un problema para el usuario.
+
+Con medidas relativas, el tamaño cambiará con respecto a la fuente del elemento raíz. Por lo que estas son una buena opción para solucionar este problema de 
+accesibilidad, en específico la medida rem.
+
+Sin embargo, la medida rem equivale a 16px y puede ser confuso mientras utilices valores altos. 
+Por lo que vamos a cambiar el valor del elemento de la raíz para que la medida rem sea igual a 10px.
+
+En la etiqueta <html> cambia el valor de la propiedad font-size a 62.5%, resultado de una regla de tres: si 16px es igual al 100% entonces cuál será el porcentaje para 10px.
+
+html {
+  font-size: 62.5%;
+}
+
+Con este cambio, la medida rem será igual a 10px, ahora los puedes utilizar sin problema y tus textos cambiarán según las preferencias de usuario.
+
+                                                                    Responsive Design
+
+El diseño responsivo (Responsive Design) consiste en un conjunto de herramientas para que tu sitio se vea bien en varias medidas de pantalla, 
+esto incluye imágenes, tipografía, internacionalización de la página y entre otros.
+
+En la actualidad, la mayoría de sitios web son visitados desde un celular, por lo que asegurarse que nuestro sitio sea responsivo para cualquier 
+dispositivo es fundamental para optimizar las ganancias.
+
+Qué son las media queries
+Las media queries son reglas CSS que establecen un comportamiento distinto o diferentes estilos en un cierto rango de la pantalla. Esto sirve para establecer 
+el layout del sitio web para diferentes tipos de pantalla: escritorio, tablets y celulares.
+
+Estos son dos tipos de media querie :
+
+max-width / max-height: establece un rango máximo para cierto comportamiento.
+min-width / min-height: establece un rango mínimo para cierto comportamiento.
+Estos valores son parecidos a condicionales, mientras se cumpla la condición, aplica determinados estilos.
+
+Estructura de la media querie
+La estructura de una media querie consiste en empezar con @media, seguido del tipo de la media querie estableciendo un rango, 
+envolviendo las reglas CSS dentro de ese rango.
+
+@media (max-width:750px){
+  div {
+      color: red;
+  }
+  p {
+      background-color: red;
+  }
+}
+
+Herramientas del desarrollador para media queries
+Para observa
+r que los cambios se estén aplicando correctamente, las herramientas de desarrollador serán de gran ayuda.
+
+Abre las herramientas del navegador y da clic en la opción “Toggle device tool”, aquí podrás manipular la pantalla y observar en cuántos píxeles está ocurriendo
+determinados estilos.
+
+Utiliza el siguiente ejemplo para visualizar cómo cambian los estilos según la longitud de la pantalla. Puedes revisar la media querie que está en el código. 
+Aunque solo cambien el color de dos elementos, puede estar cualquier propiedad que desees, prueba con todo.
+<html>
+  <div class="card1"></div>
+<div class="card2"></div>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.card1{
+  width: 100%;
+  height: 25%;
+  background-color: brown;
+}
+
+.card2 {
+  width: 50%;
+  height: 75%;
+  background-color: chartreuse;
+}
+
+@media (min-width: 500px){
+  .card1 {
+      background-color: chartreuse;
+  }
+
+  .card2 {
+    background-color: brown;
+  }
+}
+
+
+
+@mixin breakpoint($width) {
+	@media (min-width: $width) {
+            @content;
+        }
+  }
+
+  ¿Qué son las arquitecturas CSS? ¿Para qué sirven?
+Las arquitecturas CSS consisten en manejar el código CSS con una serie de reglas y patrones para facilitar su lectura, mantenibilidad y escabilidad.
+El código que has manejado no se asemeja a la realidad, pues deberás manejar varios cientos o miles de líneas de código. 
+Las arquitecturas CSS se encargan de manejar una norma en el código para que cualquiera pueda añadir o quitar funcionalidad sin mucho trabajo.
+
+Objetivos de las arquitecturas de CSS
+Los objetivos de las arquitecturas de CSS son:
+
+Ser predecible: el código debe ser lo menos complejo posible.
+Reutilizable: el código debe ser lo menos redundante, para evitar problemas con la especificidad.
+Mantenible: el código debe ser lo más fácil de manejar para añadir o quitar estilos.
+Escalable: el código debe ser capaz de crecer.
+Buenas prácticas de las arquitecturas de CSS
+Las buenas prácticas de las arquitecturas de CSS son:
+
+Lineamientos y estándares: definir normas en tu grupo de trabajo de cómo estará escrito el código.
+Documentación: establecer una breve explicación del código y de los lineamientos, esto sirve especialmente para nuevas personas se familiaricen con lo que deben hacer.
+Componentes: establecer de manera componetizada cada uno de los elementos de tu página, es decir, manejarlos por partes para después unirlos en un todo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
