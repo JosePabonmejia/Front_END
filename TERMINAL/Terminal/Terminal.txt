@@ -1,0 +1,214 @@
+🚩//Basico
+$ head : Nos sirve para mostrar las 10 primeras lineas de nuestro archivo 
+$ head archivo.txt -n 15 : Nosotros definimos las lineas del archivo que queremos ver en este caso 15
+$ tail : Nos muestra las ultimas 10 lineas de un archivo 
+$ less : Nos permite navegar por todo el archivo 
+dentro de less podemos poner ('/')  y podemos hacer una busqueda 
+$ xdg-open archivo.txt : Abre archivos 
+$ nautilus : Abre archivos carpetas segun la direccion que le proporciones 
+🚩//Manipular comandos 
+$ type : Muestra el tipo de comando que utilizamos 
+$ alias : crea comandos para la terminal solo es temporal a menos que la configures 
+$ help 'comando'('comando' --help): Nos sirve para saber para que sirven los comandos y que puedes hacer con ellos 
+$ man 'comando': Muestra el manual del comando que necesitemos 
+$ info 'comando': Muesrta informacion acerca del comando 
+$ whatis 'comando': igual 
+🚩//Wilcards: Son como filtros de busqueda 
+$ ls*.txt : Busca todos los typo txt 
+$ datos??? : los dignos de ? sirven para que busque por cuantos caracteres tenga al final 
+🚩//Detener procesos 
+$ ps :Permite saber que procesos se estan ejecutando 
+$ top :Muestra todos los procesos que estan utilizando mas recursos 
+$ kill : Para detener procesos, siempre y cuando copiemos su id PID(20174)  
+
+🚩//Redireciones
+
+stdin (0): Entrada estándar.
+stdout (1): Salida estándar.
+stderr (2): Salida de errores.
+
+$ comando < archivo :Redirige el input de un comando hacia un archivo.
+$ comando > archivo :Redirige la salida de un comando a un archivo. El mismo sobrescribe el contenido del archivo a donde se redirige la salida.
+$ comando >> archivo :Concatena la salida de un comando a un archivo. Si no existe el archivo lo crea.
+$ comando 2> archivo :Redirige la salida de error de un comando a un archivo.
+
+$ comando > archivo 2>&1 :Redirige la salida de un comando, que se ejecuto satisfactoriamente o un comando que presento errores, a un archivo.
+
+//PIPE OPERATOR 
+
+Pipe operator es un operador que permite tomar la salida de un comando y pasarla como entrada de otro comando.
+
+$cat images.txt secretosDeEstado.txt | tee archivos.txt :Crear un archivo con base en una salida (tee)
+
+$ ls | sort | tee archivosHome.txt :Organizar archivos con sort
+
+🚩//Encadenando comandos 
+
+
+Comandos separados por punto y coma “;”  
+
+Se ejecutan uno seguido del otro en el orden en que fueron puesto. Uno no se ejecuta hasta que el otro proceso aya terminado.
+–
+$ mkdir ProyectosSecretos; ls; date
+
+Comandos separados por &  
+Se ejecutan todos al mismo tiempo, es decir de forma asíncrona.
+$ date & echo "Hola" & cal
+–
+Comandos separados por &&  
+Se ejecutan solo si el comando anterior se aya ejecutado exitosamente. Suponemos que A, B y C son comando:
+A && B && C
+El B solo se va ejecutar si el A se ejecuta exitosamente, y el C solo se va ejecutar si el B si ejecuta exitosamente. Si el B no se ejecuta exitosamenta el C no se ejecuta. Si el A no se ejecuta exitomante el B y el C no se ejecutan.
+
+$ cd lp && mkdir Comida
+$cd ProyectosSecretos/ && touch ProyectoExplosivo.txt && ls
+–
+Comandos separados por ||  
+Solo se ejecuta uno. Sea cuantos comandos tienes separados por || solo ejecuta o toma en cuenta el primer que se ejecuta exitosamente (bajo la redundacia), y descarta automaticamente los demas. Cuando uno de los comandos se ejecuta exitosamente, descarta los demas comandos.
+
+$ cd ProyectosSecretos/ || cambia-carpeta ProyectosSecretos/
+$ cd ProyectosSecretos/ || cambia-carpeta ProyectosSecretos/ && mkdir ProyectoIncreible
+
+🚩//Modificando permisos en la terminal
+Existen diversos usuarios con permisos cada uno; el usuario root es especial y puede hacer de todo🚶🏽.
+Puedes crear archivos de texto también con > archivo.txt y también podemos editarlo con cat > archivo.txt 📜
+En un archivo, se muestran: [tipo de archivo][rwx usuario][rwx grupo][rwx mundo], por ejemplo, -rw-r--r-- mitexto.txt 👀.
+chmod <permiso en octal para usuario><para grupo><para mundo> <archivo> change mode nos sirve para cambiar los permisos de un archivo. Si hacemos por ejemplo chmod 755 mitexto.txt tendremos ahora -rwxr-xr-x mitexto.txt, esto no cambia para nada el contenido del archivo.
+Para quitarle los permisos a alguien en particular, usamos el modo simbólico y usando laresta, por ejemplo quitando el permiso de lectura al usuario chmod u-r mitexto.txt. Para agregar, se usa la suma. 🧮
+Podemos hacer configuraciones mas avanzadas, por ejemplo, podemos asignar varios permisos al mismo tiempo chmod u-x,go=w mitexto.txt.
+whoami Para saber que usuario somos, y también podemos obtener el ID del usuario con id.
+su root para cambiar de usuario hacía root, hay que tener cuidado al usar este usuario 😟. Su home es incluso distinto. Los archivos que crea root (o otro usuario) no se pueden eliminar por un usuario normal.
+sudo <comando> nos otorga temporalmente los permisos de root para ejecutar algún comando que ocupe permisos especiales. 🦸🏽 Nunca dejes el usuario root por defecto, y ponle una contraseña distinta!!
+
+🚩//Variables de entorno.
+
+La termina tiene una configuración con diferentes valores, que se pueden acceder con las variables de entorno. Estas son muy importantes para la configuración general del sistema 🚒.
+Podemos guardar alias para que se queden de manera permanente con esto 😉.
+ln -s <ruta> <Nombre> Esto para hacer link simbólicos, que son un tipo de archivo que hacen referencia a otro lugar, básicamente es un acceso directo desde terminal 📁.
+printenv nos muestra todas las variables de entorno que tenemos configuradas 📔.
+echo $<variables> esto nos sirve para imprimir una variable en particular.
+Algunas variables son:
+HOME es nuestro HOME de usuario 😆.
+PATH tiene todas las rutas donde se encuentran los binarios en los que se ejecuta nuestro sistema. 🛣️ Hay varios manejadores de paquetes para binarios, pero no todas las veces se agregan a PATH, y se deben agregar a mano.
+En HOME, existe un archivo que se llama .bashrc que es donde está nuestra configuración de Bash. Lo podemos abrir con VS Code para modificarlo. En este archivo podemos crear alias.
+alias <nombre>="comando" para crear un alias útil 👀.
+code <archivo> para abrir un archivo de texto en VS Code desde la terminal.
+Para modificar o crear una variable de entorno, se hace, por ejemplo PLATZI_MESSAGE='Hola amigos".
+Para agregar una ruta a la variable PATH ponemos en .bashrc PATH=$PATH:<ruta>, guardamos, cargamos bash en la terminal, y listo 😄.
+Es muuuy importante tener cuidado con los alias, nunca hay que nombrar un alias como un comando ya existente 😟.
+
+🚩//Banderas del comando find
+Banderas básicas:
+
+$-name: Realiza una búsqueda por nombre de archivo.
+$-iname: Realiza una búsqueda por nombre de archivo sin tomar en cuenta las mayúsculas o minúsculas.
+$-type: Realiza una búsqueda por tipo de archivo, f(files) y d(directories) que son los más comunes.
+$-size: Realiza una búsqueda por el tamaño de archivo y/o directorio.
+Banderas de tiempo⏰
+
+$mmin: Búsqueda por tiempo en minutos.
+$mtime: Búsqueda por tiempo en días.
+Más banderas👀
+
+$-maxdepth: Después de está bandera se pone el número de niveles de profundidad en los que queremos realizar la búsqueda
+$-empty: Realiza una búsqueda de archivos y/o directorios vacíos.
+$-perm: Búsqueda de archivos por permisos.
+$-not: Retorna los resultados que no coinciden con la búsqueda.
+$-delete: Está bandera se coloca al final del comando, eliminara los resultados de la busqueda(⚠️Hay que tener mucho cuidado al usarla).
+Hay muchas más banderas, pero esas son las que me parecieron más útiles.
+.
+Ejemplos:
+A continuación pondré unos cuantos ejemplos de las banderas mencionadas anteriormente.
+.
+
+/Búsqueda de todos los archivos con el permiso 644 a partir del directorio actual con una profundidad de 2 niveles.
+
+$ find . -perm 644 -maxdepth 2
+
+/Búsqueda de archivos vacíos a partir del directorio actual.
+$ find . -type f -empty
+
+/Búsqueda de todos los archivos .log, todos los resultados serán eliminados.
+$ find . -type d -iname "*.log" -delete   
+
+🚩//Comando Grep
+que hace grep
+
+nos permite encontrar encontrar coincidencias en un archivo
+que hace el parámetro -i en grep
+
+ignorá si es mayúscula o minúscula
+que hace el parámetro -v
+
+me trae las coincidencias que no tengan el parámetro dado
+que hace wc
+
+es el comando que nos permite contar la cantidad de palabras, lineas y bits
+como son los parámetros de wc
+
+-l : el numero de líneas
+-w el numero de palabras
+-c el numero de bits
+
+🚩//Utilidades de red
+
+$ ifconfig // sirve para ver la mascara de red, puerto de transmisión, tarjeta de red, etc
+
+$ ping // nos muestra si una ip o pagina, esta activa, si salen paquetes es porque hay conexión.
+
+$ curl pagina_web// podemos traer el html de una pagina, podríamos guardarlo con el estándar output.
+
+$ wget pagina_web // nos descarga el archivo html, pero con formato.
+
+$ traceroute pagina_web // nos sirve para ver por cuales computadoras tenemos que ir pasando para llegar por ejemplo a una pagina web. Ejemplo, nos saldrán las ip que tenemos que pasar para llegar a la pagina que queremos.
+
+$ netstat –i // nos muestra los dispositivos de red.
+
+🚩//Comprimiendo archivos tar y zip
+
+Empaquetación:
+
+tar cvf [nombre archivo].tar [dir documento]
+
+	c 	:create
+	v 	:verbose : vervosely list files processed
+	f 	:files (regular file)
+
+En Windows:
+    		tar cf 	[cualquier nombre].tar ./[carpeta a comprimir]		
+Compresión:
+    	r 	:recursive
+	    # 	: 1 = fast = less compression , 9= slowest = best compression , default :6
+Empaquetar & Comprimir:
+                ARCHIVO
+        tar cvfz [dir archivo]
+            DIRECTOORIO
+        tar cfz archivo.tar ./carpeta
+Desempaquetar:
+    zless	: muestra el contenido en ejecucion sin tener que descomprimirlo
+
+	zless README.Debian.gz
+
+tar xvf(z) [dir archivo]
+
+	x 	:extract
+	z 	:se utiliza si el archivo esta comprimido (archivo.gz)
+IMPORTANTE!
+    ++tar++ mantiene los permisos, usuarios, grupos, lugar donde se guarda. ¡La compresión del directorio es atómica! (XD)
+-Ejemplos:
+    archivo.tar.gz 	>tar xf archivo.tar.gz
+
+Para comprimir y descomprimir en formato rar :
+
+    rar a -r ToCompressInRar.rar ToCompress
+
+    unrar x -r ToCompressInRar.rar ToCompres
+
+🚩//Procesos de foreground y background.
+
+/Los procesos que están corriendo pero no se muestran en terminal se dice que están en background. Los que si se muestran están en foregroung. 🏘️
+/Para mover un proceso al background, usamos Ctrl+z. Esto lo suspende, pero sigue corriendo (como con Cat). Para matar un proceso se usa Ctrl+c
+/fg <numero de trabajo> nos permite traer un proceso al foreground. Es importante notar que el número de trabajo no es lo mismo que el PID.
+/bg <numero de trabajo> nos permite llevar un proceso al background, pero sin suspender el proceso.
+
+

@@ -1,0 +1,43 @@
+cd .. : ir a carpeta anterior 
+cat archivo.txt: mostrar rapidamente el contenido de un archivo 
+ATAJO apretar TAB luego de colocar las siglas de cualquier archivo
+history : saber todos los comandos realizados 
+si queremos regresar algun comando colocamos signo de admiracion y luego el numero de comando que quiero !40
+$ rm: Borrar archivos vacio.txt 
+$ mv :Renombrar archivos 
+$ pwd: saber donde estamos 
+$ ls : listado 
+$ ls -al : listado especifico que muestra hasta documentos ocultos  
+$ mkdir:Crea una carpeta
+$ touch :Crea un archivo
+
+$ git config --global user.email "ejemplo@gmail.com"
+
+$ git init : Crea un repositorio 
+
+$ git add biografia.txt o tambien git add . : Agrega el archivo seleccionado 
+
+$ git commit -m "version 1" : Hacer un commit 
+
+$ git remote add origin @url Quick Setup
+
+$ git push : para subir datos a la nube
+
+$ mkdir proyecto_1 : crear carpetas 
+
+$ touch vacio.txt : crear un archivo vacio 
+
+$ git status : Estatus del proyecto 
+
+$ git rm --cached texto.txt : elimina pero sigue en la memoria RAM
+
+$ git config --list : configuracion para git hub 
+
+$ git show historial.txt 
+
+$git log historial.txt para ver todos los commits
+
+$git diff :luego utilizar el comando log se extrae un codigo de commit para hacer la comparacion
+
+$git reset 57b95a590dc4c5f90e42fd6fd6c664668bc461c9 --soft y hard  
+

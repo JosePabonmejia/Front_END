@@ -1,0 +1,26 @@
+///PARA MANIPULAR EL DOM
+https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML
+https://htmlreference.io //Etiquetas HTML
+
+
+///PARA IMAGENES 
+DESCARGAR-IMAGENES 
+https://www.pexels.com/es-es/ Imagenes gratuitas 
+https://www.flaticon.com/ //Iconos vectores
+https://www.freepik.es/   //Imagenes
+https://www.freepik.es/fotos-vectores-gratis/transparente //Imagenes trasparentes
+
+COMPRIMIR OPTIMIZAR 
+https://tinypng.com/ //Comprimir
+https://www.verexif.com/ //Elimina metdatos 
+
+///PARA FUENTES 
+
+https://www.cdnfonts.com/ //chingonas 
+https://fonts.google.com/ //Fondos mas seguros 
+https://www.eniun.com/atributos-propiedades-textos-css/ //Guia para Css
+///PARA IMPUTS GUIAS HTML CSS ETC
+
+https://www.w3schools.com/html/html_form_input_types.asp
+https://developer.mozilla.org/es/ 
+https://jonassebastianohlsson.com/specificity-graph/ ///calcular especidicidad
