@@ -23,6 +23,18 @@ $ git remote add origin @url Quick Setup
 
 $ git push : para subir datos a la nube
 
+$ git fetch : trae actualizaciones del proytecto, del servidor remoto 
+
+$ git merge : combina los ultimos cambios del servidor remoto 
+
+$ git pull origin main: hace fetch y merge al mismo tiempo 
+
+$ git branch : crea una rama 
+
+$ git show : muestra datos importantes del estado del repositorio
+
+$ git checkout "rama": entramos en la rama   
+
 $ mkdir proyecto_1 : crear carpetas 
 
 $ touch vacio.txt : crear un archivo vacio 
@@ -35,9 +47,58 @@ $ git config --list : configuracion para git hub
 
 $ git show historial.txt 
 
-$git log historial.txt para ver todos los commits
+$ git log historial.txt para ver todos los commits
 
 $git diff :luego utilizar el comando log se extrae un codigo de commit para hacer la comparacion
 
 $git reset 57b95a590dc4c5f90e42fd6fd6c664668bc461c9 --soft y hard  
 
+//Con proyectos muy grandes 
+
+$ git log --oneline:Te muestra el id commit y el título del commit.
+$ git log --decorate: Te muestra donde se encuentra el head point en el log.
+$ git log --stat: Explica el número de líneas que se cambiaron brevemente.
+$ git log -p: Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
+$ git shortlog: Indica que commits ha realizado un usuario, mostrando el usuario y el título de sus commits.
+$ git log --graph --oneline --decorate y
+$ git log --pretty=format:"%cn hizo un commit %h el dia %cd": Muestra mensajes personalizados de los commits.
+$ git log -3: Limitamos el número de commits.
+$ git log --after=“2018-1-2”
+$ git log --after=“today” y
+$ git log --after=“2018-1-2” --before=“today”: Commits para localizar por fechas.
+$ git log --author=“Name Author”: Commits hechos por autor que cumplan exactamente con el nombre.
+$ git log --grep=“INVIE”: Busca los commits que cumplan tal cual está escrito entre las comillas.
+$ git log --grep=“INVIE” –i: Busca los commits que cumplan sin importar mayúsculas o minúsculas.
+$ git log – index.html: Busca los commits en un archivo en específico.
+$ git log -S “Por contenido”: Buscar los commits con el contenido dentro del archivo.
+$ git log > log.txt: guardar los logs en un archivo txt
+
+//Ramas
+
+$git k : Muestra las ramas de manera visual  
+
+$ git branch -nombre de la rama-: Con este comando se genera una nueva rama.
+
+$ git checkout -nombre de la rama-: Con este comando puedes saltar de una rama a otra.
+
+$ git checkout -b rama: Genera una rama y nos mueve a ella automáticamente, Es decir, es la combinación de git branch y git checkout al mismo tiempo.
+
+$ git reset id-commit: Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag., eliminando el historial de los commit posteriores al tag seleccionado.
+
+$ git checkout rama-o-id-commit: Nos lleva a cualquier commit sin borrar los commit posteriores al tag seleccionado.
+
+$ git log --all --graph --decorate --oneline  
+
+🚩//Cuando queremos anclar un proyecto local a un repositorio en la web
+
+$ git remote add origin  https://github.com/JosePabonmejia/HTML-CSS_Bravo.git : Jalamos el repositorio
+$ git remote -v : Nos muestra fetch y push
+$ git push origin master : llevar datos al repo
+Si da errror usar por el historial de commits de git :
+$ git pull origin master --allow-unrelated-histories : Fuciona los historiales de commits
+para finalizar $ git pull origin master
+
+
+🚩//Como cambiar de rama 
+$ git branch -m main 
+$ git push origin main 
