@@ -1,3 +1,4 @@
+//Normales
 cd .. : ir a carpeta anterior 
 cat archivo.txt: mostrar rapidamente el contenido de un archivo 
 ATAJO apretar TAB luego de colocar las siglas de cualquier archivo
@@ -11,11 +12,13 @@ $ ls -al : listado especifico que muestra hasta documentos ocultos
 $ mkdir:Crea una carpeta
 $ touch :Crea un archivo
 
+//Mas usados
+
 $ git config --global user.email "ejemplo@gmail.com"
 
 $ git init : Crea un repositorio 
 
-$ git add biografia.txt o tambien git add . : Agrega el archivo seleccionado 
+$ git add ejemplo.txt o tambien git add . : Agrega el archivo seleccionado 
 
 $ git commit -m "version 1" : Hacer un commit 
 
@@ -27,8 +30,8 @@ $ git fetch : trae actualizaciones del proytecto, del servidor remoto
 
 $ git merge : combina los ultimos cambios del servidor remoto 
 
-$ git pull origin main: hace fetch y merge al mismo tiempo 
-
+$ git pull origin main: hace fetch y merge al mismo tiempo
+ 
 $ git branch : crea una rama 
 
 $ git show : muestra datos importantes del estado del repositorio
@@ -45,32 +48,49 @@ $ git rm --cached texto.txt : elimina pero sigue en la memoria RAM
 
 $ git config --list : configuracion para git hub 
 
-$ git show historial.txt 
+$ git show ejemplo.txt 
 
-$ git log historial.txt para ver todos los commits
+$ git log ejemplo.txt para ver todos los commits
 
 $git diff :luego utilizar el comando log se extrae un codigo de commit para hacer la comparacion
 
-$git reset 57b95a590dc4c5f90e42fd6fd6c664668bc461c9 --soft y hard  
+$git reset 57b95a590dc4c5f90e42fd6fd6c664668bc461c9 --soft y hard nos regresa al estado anterior o futuro del commit 
+
 
 //Con proyectos muy grandes 
 
 $ git log --oneline:Te muestra el id commit y el título del commit.
+
 $ git log --decorate: Te muestra donde se encuentra el head point en el log.
+
 $ git log --stat: Explica el número de líneas que se cambiaron brevemente.
+
 $ git log -p: Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
+
 $ git shortlog: Indica que commits ha realizado un usuario, mostrando el usuario y el título de sus commits.
+
 $ git log --graph --oneline --decorate y
+
 $ git log --pretty=format:"%cn hizo un commit %h el dia %cd": Muestra mensajes personalizados de los commits.
+
 $ git log -3: Limitamos el número de commits.
+
 $ git log --after=“2018-1-2”
+
 $ git log --after=“today” y
+
 $ git log --after=“2018-1-2” --before=“today”: Commits para localizar por fechas.
+
 $ git log --author=“Name Author”: Commits hechos por autor que cumplan exactamente con el nombre.
+
 $ git log --grep=“INVIE”: Busca los commits que cumplan tal cual está escrito entre las comillas.
+
 $ git log --grep=“INVIE” –i: Busca los commits que cumplan sin importar mayúsculas o minúsculas.
+
 $ git log – index.html: Busca los commits en un archivo en específico.
+
 $ git log -S “Por contenido”: Buscar los commits con el contenido dentro del archivo.
+
 $ git log > log.txt: guardar los logs en un archivo txt
 
 //Ramas
