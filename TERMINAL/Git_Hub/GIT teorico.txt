@@ -518,3 +518,117 @@ Publicar una rama local al repositorio remoto:
 git push origin nombre-de-la-rama.
 Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git utilizando el comando gitk. Gitk fue el primer visor gráfico que se desarrolló para ver de manera gráfica el historial de un repositorio de Git.
 
+//Configurar múltiples colaboradores en un repositorio de GitHub
+
+Por defecto, cualquier persona puede clonar o descargar tu proyecto desde GitHub, pero no pueden crear commits, ni ramas. Esto quiere decir que pueden copiar tu proyecto pero no colaborar con él. Existen varias formas de solucionar esto para poder aceptar contribuciones. Una de ellas es añadir a cada persona de nuestro equipo como colaborador de nuestro repositorio.
+
+Cómo agregar colaboradores en Github
+Solo debemos entrar a la configuración de colaboradores de nuestro proyecto. Se encuentra en:
+Repositorio > Settings > Collaborators
+Ahí, debemos añadir el email o username de los nuevos colaboradores.
+Si, como colaborador, agregaste erróneamente el mensaje del commit, lo puedes cambiar de la siguiente manera:
+
+Hacer un commit con el nuevo mensaje que queremos, esto nos abre el editor de texto de la terminal:
+git commit —amend
+Corregimos el mensaje
+Traer el repositorio remoto
+git pull origin master
+Ejecutar el cambio
+git push --set-upstream origin master
+
+//Flujo de trabajo profesional: Haciendo merge de ramas de desarrollo a master
+
+Para poder desarrollar software de manera óptima y ordenada, necesitamos tener un flujo de trabajo profesional, que nos permita trabajar en conjunto sin interrumpir el trabajo de otros desarrolladores. Una buena práctica de flujo de trabajo sería la siguiente:
+
+Crear ramas
+Asignar una rama a cada programador
+El programador baja el repositorio con git pull origin master
+El programador cambia de rama
+El programador trabaja en esa rama y hace commits
+El programador sube su trabajo con git push origin #nombre_rama
+El encargado de organizar el proyecto baja, revisa y unifica todos los cambios
+
+//Flujo de trabajo profesional con Pull requests
+En un entorno profesional normalmente se bloquea la rama master, y para enviar código a dicha rama pasa por un code review y luego de su aprobación se unen códigos con los llamados merge request.
+
+Para realizar pruebas enviamos el código a servidores que normalmente los llamamos staging develop (servidores de pruebas) luego de que se realizan las pruebas pertinentes tanto de código como de la aplicación estos pasan al servidor de producción con el ya antes mencionado merge request.
+
+Los PR (pull requests) son la base de la colaboración a proyectos Open Source, si tienen pensando colaborar en alguno es muy importante entender esto y ver cómo se hace en las próximas clases. Por lo general es forkear el proyecto, implementar el cambio en una nueva rama, hacer el PR y esperar que los administradores del proyecto hagan el merge o pidan algún cambio en el código o commits que hiciste.
+
+Proceso de un pull request para trabajo en producción:
+Un pull request es un estado intermedio antes de enviar el merge.
+El pull request permite que otros miembros del equipo revisen el código y así aprobar el merge a la rama.
+Permite a las personas que no forman el equipo, trabajar y colaborar con una rama.
+La persona que tiene la responsabilidad de aceptar los pull request y hacer los merge tienen un perfil especial y son llamados DevOps
+
+//Utilizando Pull Requests en GitHub
+
+Un Pull Request es una función de GitHub que permite a tu equipo solicitar la revisión y aprobación de sus cambios antes de fusionarlos en la rama principal de desarrollo, denominada “master” o “main”.
+
+Al crear un PR se genera una conversación en la que los demás miembros pueden seguir y comentar los cambios propuestos en el código del repositorio. Esto permite detectar cualquier error o problema potencial antes de integrarlos en la rama principal, lo que ayuda a mantener el proyecto más limpio y estable.
+
+Estructura de la incorporación de cambios
+El proceso para hacer un pull request consiste en indicar la rama y repositorio de origen y destino. De esta forma, un desarrollador podrá incluir tus cambios en su proyecto.
+
+Bitbucket tiene una configuración predeterminada que funciona para la mayoría de los equipos, pero cada equipo puede personalizarla para ajustarla a su propio flujo de trabajo.
+
+///Cómo hacer un pull request
+Un PR es un proceso crucial para facilitar la revisión y la integración efectiva del código. A continuación, veremos el paso a paso.
+
+Solicitando un pull request
+
+Crea una rama paralela: Antes de hacer cambios en el código, utiliza el comando git checkout -b <rama> para crear una nueva rama. Así, podrás hacer tus modificaciones sin afectar la rama principal (por ejemplo, master).
+Realiza commits: Después de hacer cambios en los archivos, usa git commit -am '<Comentario>' para hacer un commit con un mensaje descriptivo.
+Sube los cambios: Usa git push origin <rama> para subir tus cambios de la rama local al repositorio remoto. Reemplaza <rama> con el nombre de tu rama.
+Crea un pull request: En el repositorio remoto (como GitHub), crea un nuevo pull request. Selecciona la rama principal como destino y tu rama con los cambios como comparación.
+Feedback: Los revisores examinarán los cambios. Usa la sección de comentarios del pull request para discutir los cambios y proporcionar feedback adicional.
+Realiza los cambios solicitados: Si se solicitan cambios, regresa a tu rama local y haz las modificaciones necesarias. Luego, sube los cambios al repositorio remoto usando git push origin <rama>.
+
+Acepta los cambios en GitHub: Si estás satisfecho con los cambios propuestos en el pull request y consideras que están listos para ser fusionados con la rama principal, acepta el pull request en GitHub. De esta forma, los cambios se fusionarán en la rama principal del repositorio.
+Realiza el merge en la rama principal: Después de aceptar el pull request, selecciona la opción para realizar el merge en GitHub. Esto combinará los cambios de la rama con los cambios existentes en la rama principal (master).
+
+Para solicitar y aceptar pull requests de manera efectiva, sigue estos sencillos pasos que te ayudarán a facilitar la colaboración y la mejora continua del código en tu proyecto.
+
+¿Cómo corregir un Pull Request?
+Al revisar un pull request, es posible encontrar problemas o áreas que necesiten corrección antes de que los cambios se puedan unir con la rama principal. Aquí se explica cómo corregir un pull request de forma efectiva.
+
+Lee los comentarios y feedback: Comprueba cuidadosamente todos los comentarios y feedback proporcionados por los revisores en el pull request. Toma nota de los problemas señalados y las sugerencias de mejora.
+Regresa a tu rama local: Utiliza el comando git checkout <rama> para volver a la rama en la que realizaste los cambios y necesitas revisar.
+Realiza las modificaciones: Basándote en los comentarios y feedback recibidos, efectúa las revisiones necesarias en los archivos relevantes. Asegúrate de abordar todos los problemas señalados y seguir las sugerencias de mejora proporcionadas.
+Realiza un nuevo commit: Después de efectuar las correcciones, utiliza el comando git commit -am '<Comentario>' para crear un nuevo commit que refleje las correcciones realizadas. Asegúrate de proporcionar un mensaje claro y descriptivo para indicar las modificaciones realizadas.
+Sube los cambios al repositorio remoto: Utiliza el comando git push origin <rama> para subir los cambios corregidos a la rama correspondiente en el repositorio remoto.
+Actualiza el pull request: Una vez que los cambios corregidos se hayan subido al repositorio remoto, el pull request se actualizará automáticamente para reflejar las modificaciones procedidas en la rama. Los revisores podrán ver los nuevos cambios y comentarios.
+Comunica las correcciones realizadas: Si consideras que has abordado adecuadamente los problemas señalados y las sugerencias de mejora, puedes comunicar a los revisores que has realizado las correcciones necesarias y que el pull request está listo para ser revisado nuevamente.
+
+Es hora de administrar tus pull requests
+Al seguir estos pasos, podrás revisar un pull request de manera efectiva, asegurándote de abordar los problemas identificados y proporcionar una versión mejorada de los cambios propuestos. La comunicación abierta y clara con los revisores es fundamental durante este proceso para garantizar una colaboración exitosa.
+
+Recuerda que cualquier modificación que realices en una rama también modificará el pull request, así que es importante que procedas con los cambios necesarios y los subas de nuevo al repositorio remoto antes de aceptar el pull request.
+
+//Creando un Fork, contribuyendo a un repositorio
+
+Los forks o bifurcaciones son una característica única de GitHub en la que se crea una copia exacta del estado actual de un repositorio directamente en GitHub. Este repositorio podrá servir como otro origen y se podrá clonar (como cualquier otro repositorio). En pocas palabras, lo podremos utilizar como un nuevo repositorio git cualquiera
+
+Un fork es como una bifurcación del repositorio completo. Comparte una historia en común con el original, pero de repente se bifurca y pueden aparecer varios cambios, ya que ambos proyectos podrán ser modificados en paralelo y para estar al día un colaborador tendrá que estar actualizando su fork con la información del original.
+
+Al hacer un fork de un poryecto en GitHub, te conviertes en dueñ@ del repositorio fork, puedes trabajar en este con todos los permisos, pero es un repositorio completamente diferente que el original, teniendo solamente alguna historia en común (como crédito al creado o creadora original).
+
+Los forks son importantes porque es la manera en la que funciona el open source, ya que, una persona puede no ser colaborador de un proyecto, pero puede contribuír al mismo, haciendo mejor software que pueda ser utilizado por cualquiera.
+
+Cómo se hace un fork remoto desde consola en GitHub
+Al hacer un fork, GitHub sabe que se hizo el fork del proyecto, por lo que se le permite al colaborador hacer pull request desde su repositorio propio.
+
+Cuando trabajas en un proyecto que existe en diferentes repositorios remotos (normalmente a causa de un fork), es muy probable que desees poder trabajar con ambos repositorios. Para esto, puedes generar un remoto adicional desde consola.
+
+git remote add <nombre_del_remoto> <url_del_remoto> 
+git remote upstream https://github.com/freddier/hyperblog
+
+Al crear un remoto adicional, podremos hacer pull desde el nuevo origen. En caso de tener permisos, podremos hacer fetch y push.
+
+git pull <remoto> <rama>
+git pull upstream master
+
+Este pull nos traerá los cambios del remoto, por lo que se estará al día en el proyecto. El flujo de trabajo cambia, en adelante se estará trabajando haciendo pull desde el upstream y push al origin para pasar a hacer pull request.
+
+git pull upstream master
+git push origin master

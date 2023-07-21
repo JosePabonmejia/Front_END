@@ -14,6 +14,8 @@ $ touch :Crea un archivo
 
 //Mas usados
 
+$ git status : Estatus del proyecto 
+
 $ git config --global user.email "ejemplo@gmail.com"
 
 $ git init : Crea un repositorio 
@@ -38,11 +40,7 @@ $ git show : muestra datos importantes del estado del repositorio
 
 $ git checkout "rama": entramos en la rama   
 
-$ mkdir proyecto_1 : crear carpetas 
-
 $ touch vacio.txt : crear un archivo vacio 
-
-$ git status : Estatus del proyecto 
 
 $ git rm --cached texto.txt : elimina pero sigue en la memoria RAM
 
@@ -50,11 +48,13 @@ $ git config --list : configuracion para git hub
 
 $ git show ejemplo.txt 
 
-$ git log ejemplo.txt para ver todos los commits
+$ git log : para ver todos los commits
 
-$git diff :luego utilizar el comando log se extrae un codigo de commit para hacer la comparacion
+$ git log --graph : Para ver commits con ramas y todo 
 
-$git reset 57b95a590dc4c5f90e42fd6fd6c664668bc461c9 --soft y hard nos regresa al estado anterior o futuro del commit 
+$ git diff :luego utilizar el comando log se extrae un codigo de commit para hacer la comparacion
+
+$ git reset 57b95a590dc4c5f90e42fd6fd6c664668bc461c9 --soft y hard nos regresa al estado anterior o futuro del commit 
 
 
 //Con proyectos muy grandes 
@@ -95,7 +95,9 @@ $ git log > log.txt: guardar los logs en un archivo txt
 
 //Ramas
 
-$git k : Muestra las ramas de manera visual  
+$ git branch o git-branch --all :Muestra todas las ramas existentes
+
+$ gitk : Muestra las ramas de manera visual habre una herramienta
 
 $ git branch -nombre de la rama-: Con este comando se genera una nueva rama.
 
@@ -106,6 +108,10 @@ $ git checkout -b rama: Genera una rama y nos mueve a ella automáticamente, Es 
 $ git reset id-commit: Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag., eliminando el historial de los commit posteriores al tag seleccionado.
 
 $ git checkout rama-o-id-commit: Nos lleva a cualquier commit sin borrar los commit posteriores al tag seleccionado.
+
+$ git show branch: Nos muestra las ramas creadas 
+
+$ git 
 
 $ git log --all --graph --decorate --oneline  
 
@@ -122,3 +128,22 @@ para finalizar $ git pull origin master
 🚩//Como cambiar de rama 
 $ git branch -m main 
 $ git push origin main 
+
+//Configurar múltiples colaboradores en un repositorio de GitHub pasos
+
+$ git clone htttp.etc : Para clona lo que exista en el repo.
+$ vim historia.txt : Muestra el archivo historia en el cmd
+$ git status : Estado del repo 
+$ git commit -am "Primer cimmit desde el contrato": No se coloca ad por que solo fue un cambio pequeño 
+$ git pull origin main : Traemos lo que hay en internet 
+$ git log : para ver los commits 
+$ git log --graph : Para ver commits con ramas y todo 
+$ git push origin master : para mandar los datos al repo 
+luego comocamos nuestros datos como correo y contraseña 
+pero primero debemos estar agregados en el repo como colaboradores
+
+//Flujo de trabajo profesional: Haciendo merge de ramas de desarrollo a master
+Por lo general la empresa te manda una rama para que puedas trabahar 
+
+
+
