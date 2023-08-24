@@ -1,0 +1,338 @@
+$primary-color:#FFEFE7;
+$secundary-color:#FFDAC6;
+$tertiary-color:#BABD8D;
+$primary-text-color:#7C6A0A;
+$button-color: #fa9500;
+$font-stackl:'IBM Plex Sans', sans-serif;
+
+@mixin flex-center($direction,$content,$align,$gap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin h1-p ($size,$weight,$height,$color)
+{
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    color: $color;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+}
+
+body{
+    font-family: $font-stackl;
+    background-color: $primary-color;
+}
+
+
+nav{
+    background-color: $primary-color;
+    width: 100%;
+    height: 135px;
+    @include flex-center(row,space-between ,flex-end ,none );
+    padding: 36px 85px 48px;
+
+    p{
+        @include h1-p(3.0rem,400 ,none ,$primary-text-color);
+    }
+    .icons{
+        height: 100%;
+        @include flex-center(center, none,none ,48px );
+        button{
+            
+            background:none;
+            border: none;
+            
+            svg{
+                height: 38px;
+                width: 38px;
+                
+            }    
+        }
+
+    }
+}
+main{
+
+    height: auto;
+    width: 100%;
+
+        article{
+            color: $primary-text-color;
+            width: 100%;
+            height: auto;
+            padding: 75px 65px;
+            @include flex-center(row,space-between ,none ,none );
+            .inpact-section{
+            
+            h1{
+                    margin-top: 38px;
+                    @include h1-p(6rem,600 ,none ,none);
+
+            }
+            p{
+                    margin-top: 70px;
+                    max-width: 592px;
+                    min-height: 166px;
+                    @include h1-p(2.5rem,400 ,3.2rem ,none );
+                
+            }
+            button{
+                    margin-top: 115px;
+                    padding-right: 25px;
+                    @include h1-p(2.3rem,700 ,none ,$primary-color );
+                    border: none;
+                    width: 18vw;
+                    height: 73px;
+                    border-radius: 35px;
+                    background-color: $button-color;
+
+            }
+
+            }
+            .image-section{
+                
+                img {
+                    width:60vh;
+                    border-radius:20px;
+                    
+                }
+            }
+        }
+
+        section{
+
+            width: 100%;
+            height: auto;
+            
+
+            h2{
+                
+                @include h1-p(5rem,400,none,$primary-text-color);   
+            }
+     
+            .healthcare{
+                padding: 65px;
+                h2{
+                    margin-bottom:60px;
+                }
+                .card-section{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 165px;
+                    .product-card{
+                        width:324px;
+                        height: auto;
+                        background-color: $secundary-color;
+                        position: relative;
+                        border-radius: 8px;
+                        padding: 50px 41px;
+
+                        .icon{
+                            position: absolute;
+                            left: calc(99% - 35px);
+                            top: 18px;
+                        }
+                        .product-image{
+                            background-image: url(../asets/img/products/toothbrush.jpg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                            height: 40vh;
+                            border-radius: 7px;
+                        }
+                        h3{
+                            margin: 10px 0;
+                            font-size: 2.5rem;
+                            font-weight: 600;
+                            color: $primary-text-color;
+                        }
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                            color: $primary-text-color;
+                            line-height: 1.9rem;
+                        }
+                        .product-image.cream {
+                                background-image: url(../asets/img/products/hand-cream.jpeg);
+                        }
+                        .product-image.serum {
+                                background-image: url(../asets/img/products/serum.jpg);
+                        }
+                        .product-image.kit-viaje {
+                                background-image: url(../asets/img/products/organic-kit.jpg);
+                        }
+                        .product-image.set-soap {
+                                background-image: url(../asets/img/products/organic-kit.jpg);
+                        }
+                        .product-image.skincare {
+                                background-image: url(../asets/img/products/guasha-kit.jpg);
+                        }
+                        
+                    }
+
+             
+                }
+
+            }
+            .furniture {
+                @extend .healthcare;
+                .card-section{
+                    .product-card{
+                        background-color: $tertiary-color;
+
+                        h3{
+                            color: $primary-color;
+                        }
+                        p{
+                            color: $primary-color;
+                        }
+                        .product-image.chair-bambu {
+                            background-image: url(../asets/img/furniture/wood-chair.jpg);
+                        }
+                        .product-image.small-table {
+                            background-image: url(../asets/img/furniture/small-table.jpeg);
+                        }
+                        .product-image.buro {
+                            background-image: url(../asets/img/furniture/stand-table.jpg);
+                        }
+                        .product-image.cajonera {
+                            background-image: url(../asets/img/furniture/mueble.jpg);
+                        }
+                        .product-image.mirror {
+                            background-image: url(../asets/img/furniture/mirror.jpg);
+                        }
+                        .product-image.lamp {
+                            background-image: url(../asets/img/furniture/desk-lamp.jpg);
+                        }
+                        .product-image.table {
+                            background-image: url(../asets/img/furniture/stand.jpg);
+                        }
+                        .product-image.breackfast-table{
+                            background-image: url(../asets/img/furniture/mini-table.jpg);
+                        }
+                        .product-image.decorative-table{
+                            background-image: url(../asets/img/furniture/table.jpg);
+                        }
+                    }
+                }
+            }
+        }
+        .info-section{
+
+            section {
+                padding: 65px;
+                width: 100%;
+                height: auto;
+            }
+            section h2{
+                font-weight: 500;
+                
+            }
+            .about-us {
+
+                    .about-us-container{
+                        @include flex-center(row,space-around ,none ,200px );
+                        padding: 7.5rem 5rem;
+                        gap: 200px;
+        
+                    }
+                    .about-us-container div{
+                        @include flex-center(row,center ,none ,none );
+                    } 
+                    
+                    .about-us-container p {
+                        color:#E86424;
+                        @include h1-p(3rem,500 ,3.9rem ,none );
+                        margin-left: 30px;
+                        text-align: center;
+                    }
+            }
+
+            .gallery {
+                .gallery-img-container{
+                    width: 100%;
+                    height: auto;
+                    padding: 60px;  
+                    display: flex;
+                    gap: 60px;
+                    .gallery-img{
+                        background-image: url(../asets/img/gallery-1.jpg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        height: 45vh;
+                        width: 30vw;
+                        border-radius: 16px;
+                        
+                        &:hover{
+                        transform: scale(1.1);
+                        transition-duration: 0.3s;
+                        }
+                    }
+                    .gallery-img.two{
+                        background-image: url(../asets/img/gallery-2.jpg);
+                    }
+                    .gallery-img.tree{
+                        background-image: url(../asets/img/gallery-3.jpg);
+                    }
+
+                }
+            }
+            .location{
+                
+                .map{
+                    background-image: url(../asets/img/map.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    height: 68vh;
+                    width: 91vw;
+                    border-radius: 7px;
+                    margin: 70px 0px;
+                   
+                }
+                h3{
+                    @include h1-p(3.5rem,400 ,9.5rem ,#E86424 );
+                }
+                p{
+                    @include h1-p(2.5rem,400 ,none ,#E86424 );
+                    padding-bottom: 60px;
+                }
+               
+            }
+         }
+
+}
+
+
+footer{
+    $background: #fa9500;
+    background-color: $background;
+    width: 100%;
+    height: auto;
+    padding: 70px 60px 30px;
+    
+    h3{
+        @include h1-p(3rem,500,none,$primary-color );
+        padding-bottom: 50px;
+    }
+    p{
+        @include h1-p(2rem,500 ,none,$primary-color );
+        padding-bottom: 20px;
+    }
+    .social-media{
+        @include flex-center(row,center ,none ,20px );
+    }
+}
+

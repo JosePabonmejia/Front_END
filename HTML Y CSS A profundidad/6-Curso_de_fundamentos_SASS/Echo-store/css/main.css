@@ -1,0 +1,309 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #FFEFE7;
+}
+
+nav {
+  background-color: #FFEFE7;
+  width: 100%;
+  height: 135px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: none;
+  padding: 36px 85px 48px;
+}
+nav p {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: none;
+  color: #7C6A0A;
+}
+nav .icons {
+  height: 100%;
+  display: flex;
+  flex-direction: center;
+  justify-content: none;
+  align-items: none;
+  gap: 48px;
+}
+nav .icons button {
+  background: none;
+  border: none;
+}
+nav .icons button svg {
+  height: 38px;
+  width: 38px;
+}
+
+main {
+  height: auto;
+  width: 100%;
+}
+main article {
+  color: #7C6A0A;
+  width: 100%;
+  height: auto;
+  padding: 75px 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
+  gap: none;
+}
+main article .inpact-section h1 {
+  margin-top: 38px;
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: none;
+  color: none;
+}
+main article .inpact-section p {
+  margin-top: 70px;
+  max-width: 592px;
+  min-height: 166px;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+  color: none;
+}
+main article .inpact-section button {
+  margin-top: 115px;
+  padding-right: 25px;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: none;
+  color: #FFEFE7;
+  border: none;
+  width: 18vw;
+  height: 73px;
+  border-radius: 35px;
+  background-color: #fa9500;
+}
+main article .image-section img {
+  width: 60vh;
+  border-radius: 20px;
+}
+main section {
+  width: 100%;
+  height: auto;
+}
+main section h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: none;
+  color: #7C6A0A;
+}
+main section .healthcare, main section .furniture {
+  padding: 65px;
+}
+main section .healthcare h2, main section .furniture h2 {
+  margin-bottom: 60px;
+}
+main section .healthcare .card-section, main section .furniture .card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 165px;
+}
+main section .healthcare .card-section .product-card, main section .furniture .card-section .product-card {
+  width: 324px;
+  height: auto;
+  background-color: #FFDAC6;
+  position: relative;
+  border-radius: 8px;
+  padding: 50px 41px;
+}
+main section .healthcare .card-section .product-card .icon, main section .furniture .card-section .product-card .icon {
+  position: absolute;
+  left: calc(99% - 35px);
+  top: 18px;
+}
+main section .healthcare .card-section .product-card .product-image, main section .furniture .card-section .product-card .product-image {
+  background-image: url(../asets/img/products/toothbrush.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  border-radius: 7px;
+}
+main section .healthcare .card-section .product-card h3, main section .furniture .card-section .product-card h3 {
+  margin: 10px 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #7C6A0A;
+}
+main section .healthcare .card-section .product-card p, main section .furniture .card-section .product-card p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #7C6A0A;
+  line-height: 1.9rem;
+}
+main section .healthcare .card-section .product-card .product-image.cream, main section .furniture .card-section .product-card .product-image.cream {
+  background-image: url(../asets/img/products/hand-cream.jpeg);
+}
+main section .healthcare .card-section .product-card .product-image.serum, main section .furniture .card-section .product-card .product-image.serum {
+  background-image: url(../asets/img/products/serum.jpg);
+}
+main section .healthcare .card-section .product-card .product-image.kit-viaje, main section .furniture .card-section .product-card .product-image.kit-viaje {
+  background-image: url(../asets/img/products/organic-kit.jpg);
+}
+main section .healthcare .card-section .product-card .product-image.set-soap, main section .furniture .card-section .product-card .product-image.set-soap {
+  background-image: url(../asets/img/products/organic-kit.jpg);
+}
+main section .healthcare .card-section .product-card .product-image.skincare, main section .furniture .card-section .product-card .product-image.skincare {
+  background-image: url(../asets/img/products/guasha-kit.jpg);
+}
+main section .furniture .card-section .product-card {
+  background-color: #BABD8D;
+}
+main section .furniture .card-section .product-card h3 {
+  color: #FFEFE7;
+}
+main section .furniture .card-section .product-card p {
+  color: #FFEFE7;
+}
+main section .furniture .card-section .product-card .product-image.chair-bambu {
+  background-image: url(../asets/img/furniture/wood-chair.jpg);
+}
+main section .furniture .card-section .product-card .product-image.small-table {
+  background-image: url(../asets/img/furniture/small-table.jpeg);
+}
+main section .furniture .card-section .product-card .product-image.buro {
+  background-image: url(../asets/img/furniture/stand-table.jpg);
+}
+main section .furniture .card-section .product-card .product-image.cajonera {
+  background-image: url(../asets/img/furniture/mueble.jpg);
+}
+main section .furniture .card-section .product-card .product-image.mirror {
+  background-image: url(../asets/img/furniture/mirror.jpg);
+}
+main section .furniture .card-section .product-card .product-image.lamp {
+  background-image: url(../asets/img/furniture/desk-lamp.jpg);
+}
+main section .furniture .card-section .product-card .product-image.table {
+  background-image: url(../asets/img/furniture/stand.jpg);
+}
+main section .furniture .card-section .product-card .product-image.breackfast-table {
+  background-image: url(../asets/img/furniture/mini-table.jpg);
+}
+main section .furniture .card-section .product-card .product-image.decorative-table {
+  background-image: url(../asets/img/furniture/table.jpg);
+}
+main .info-section section {
+  padding: 65px;
+  width: 100%;
+  height: auto;
+}
+main .info-section section h2 {
+  font-weight: 500;
+}
+main .info-section .about-us .about-us-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: none;
+  gap: 200px;
+  padding: 7.5rem 5rem;
+  gap: 200px;
+}
+main .info-section .about-us .about-us-container div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: none;
+  gap: none;
+}
+main .info-section .about-us .about-us-container p {
+  color: #E86424;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.9rem;
+  color: none;
+  margin-left: 30px;
+  text-align: center;
+}
+main .info-section .gallery .gallery-img-container {
+  width: 100%;
+  height: auto;
+  padding: 60px;
+  display: flex;
+  gap: 60px;
+}
+main .info-section .gallery .gallery-img-container .gallery-img {
+  background-image: url(../asets/img/gallery-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 45vh;
+  width: 30vw;
+  border-radius: 16px;
+}
+main .info-section .gallery .gallery-img-container .gallery-img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+main .info-section .gallery .gallery-img-container .gallery-img.two {
+  background-image: url(../asets/img/gallery-2.jpg);
+}
+main .info-section .gallery .gallery-img-container .gallery-img.tree {
+  background-image: url(../asets/img/gallery-3.jpg);
+}
+main .info-section .location .map {
+  background-image: url(../asets/img/map.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 68vh;
+  width: 91vw;
+  border-radius: 7px;
+  margin: 70px 0px;
+}
+main .info-section .location h3 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 9.5rem;
+  color: #E86424;
+}
+main .info-section .location p {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: none;
+  color: #E86424;
+  padding-bottom: 60px;
+}
+
+footer {
+  background-color: #fa9500;
+  width: 100%;
+  height: auto;
+  padding: 70px 60px 30px;
+}
+footer h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: none;
+  color: #FFEFE7;
+  padding-bottom: 50px;
+}
+footer p {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: none;
+  color: #FFEFE7;
+  padding-bottom: 20px;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: none;
+  gap: 20px;
+}/*# sourceMappingURL=main.css.map */
