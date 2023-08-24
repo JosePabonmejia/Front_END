@@ -93,8 +93,8 @@ Por lo general se llevan a cabo en los sketches para poder realizar ajustes ante
 
 Primer paso de nuestro diseño UX son los diagramas de flujo.
 Pasamos los elementos de nuestro BRIEF a elementos tangibles.
-***El primer diagrama se llama SITEMAP Y es un mapa completo de nuestro sitio.*** 
+### ***El primer diagrama se llama SITEMAP Y es un mapa completo de nuestro sitio.*** 
 Aquí definimos cuales son las secciones principales, las secciones secundarias y las paginas externas a nuestro sitio.
-***El siguiente es el USER FLOW.*** 
+### ***El siguiente es el USER FLOW.*** 
 Estos nos permiten hacer un diagrama de todos los pasos que hace un usuario para completar una tarea. Con este flujo podemos saber cuántas pantallas o componentes tenemos para realizar una acción de usuario.
 No hay un número definido de pantallas o componentes que vamos a diseñar para un trabajo en particular.
