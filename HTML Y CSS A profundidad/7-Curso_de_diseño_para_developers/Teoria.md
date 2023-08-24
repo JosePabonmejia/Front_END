@@ -128,3 +128,29 @@ Se diferencia del UX en que este último se enfoca en la investigación, prototi
     * Tipografías.
 
 Cuando trabajamos con los dos diseños al mismo tiempo garantizamos que nuestra aplicación va a ser bonita, agradable y va a ser funcional para todos los usuarios. No debemos quitarle importancia a ninguno de los dos.
+
+## TEORÍA DEL COLOR.
+Para saber que colores son los adecuados a un diseño aplicamos la teoría del color.
+### Psicología del color. 
+Es un área de estudio que investiga la forma en la que el cerebro percibe los colores y los asocia a conceptos y sentimientos.
+## ***Los colores se asocian a ciertos sentimientos:***
+* ***Rojo:*** Pasión, deportes, comida, entretenimiento.
+* ***Naranja:*** Diversión, arte, comida, eventos.
+* ***Amarillo:*** Felicidad, comida, compras, ocio.
+* ***Verde claro:*** Armonía, ambiente, comida, educación.
+* ***Verde oscuro:*** Seguridad. Agro, bancos, inmobiliarias.
+* ***Azul claro (celeste):*** Sabiduría, productos de niños, salud, tecnología.
+* ***Azul oscuro:*** Confianza, finanzas, salud, seguros.
+* ***Malva:*** Misterio, religión, productos alternativos.
+* ***Rosa:*** Amor, belleza, moda, productos niños.
+* ***Marrón (café):*** Estabilidad, agro, legal, construcción.
+* ***Gris:*** Neutral, todas las industrias.
+* ***Negro:*** Elegancia, todas las industrias.
+La idea es que uses la teoría del color para elegir los colores de tu aplicación según el problema que resuelve.
+
+## ***Otros tips para seleccionar los colores:***
+* Utiliza color RGB y hexadecimales.
+* Crea un código de color consistente. Que todos los componentes de la misma categoría tengan el mismo color.
+* Menos es más. No satures de colores el sitio.
+* Asegura que el color elegido es accesible.
+* Define una paleta de color. Esto es un grupo de colores que vamos a usar en toda nuestra aplicación.
