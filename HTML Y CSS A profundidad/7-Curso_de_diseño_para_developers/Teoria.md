@@ -77,3 +77,14 @@ Es importante que este documento sea bonito, este organizado y podamos ver bien 
 Es importante que cualquier persona que lea el BRIEF sepa que está leyendo.
 Los objetivos es la parte más importante, porque de ahí vamos a partir para crear nuestro producto.
 También es bueno tener un cronograma donde vamos a poner las fechas de las entregas.
+
+## Definicion de diseño UX
+
+### Investigacion  
+Recopilar informacion para conocer que ocupan los usuarios principalmente. Es bueno apoyarse de aplicaciones ya existentes para crear un buen diseño UX
+### Analisis 
+Una vez recopilada la informacion se analiza y se obtienen los puntos importantes que debemos tener en cuenta al momento de crear el diseño
+### Diseño 
+Se crean prototipos o sketches para visualizar el resultado
+### Pruebas de usuario 
+Por lo general se llevan a cabo en los sketches para poder realizar ajustes antes de llevar el diseño a codigo
