@@ -24,3 +24,26 @@ Construimos la idea hasta el producto final.
 * ***Proximidad:*** Agrupar elementos
 * ***Repetición:*** Concepto de marca
 * ***Espacio:*** Como hacerle uso
+
+## DISEÑO RESPONSIVO.
+Es una metodología que nos permite crear diferentes diseños que sean adaptables a diferentes dispositivos.
+### ¿Cómo garantizamos que nuestro diseño sea responsivo?
+* 1º Tenemos que empezar por dispositivos móviles. 
+Esto nos garantiza que partimos desde el contenido básico hasta el contenido más complejo.
+* 2º Separando las capas de contenido con la de funcionalidad. 
+Así aseguramos que todo el contenido este accesible a todos los usuarios.
+* 3º Utilizar sistemas de Grilla y columnas. 
+Las columnas son referencia para dividir el ancho de la página. Así es más fácil el diseño.
+### DIFERENTES METODOLOGÍAS.
+* Mejora progresiva. (Progressive enhacement) 
+Se parte de una base donde tenemos solo los elementos esenciales del diseño para un movil, e iremos ampliando la complejidad a medida que vamos subiendo hasta el PC.
+* Degradación Agraciada. (Graceful degradation) 
+Empezamos desde una versión completa y vamos reduciendo la complejidad a medida que bajamos de dispositivo.
+Este método se usa sobre todo cuando la web ya esta hecha y queremos adaptarla a móviles o tablets.
+Estas metodologías afectan tanto al diseño como a la funcionalidad.
+
+* En diseño nn Código
+ 4º Animaciones 4º JS
+3º Diseño Visual 3º CSS
+2º Wireframes 2º HTML
+1º Contenido 1º Data
