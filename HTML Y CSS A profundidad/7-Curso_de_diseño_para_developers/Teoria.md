@@ -116,15 +116,15 @@ Es el momento de ponerle color a los bocetos.<br>
 El diseño UI es el diseño que se enfoca en la capa de estilos visuales que va por encima de la estructura de contenido.<br>
 Se diferencia del UX en que este último se enfoca en la investigación, prototipado y arquitectura de la información.<br><br>
 ***De que se encarga cada diseño:***
-* UX:
-    1. Diseño de interacción.
-    1. Prototipado.
-    1. Arquitectura de la información
-    1. Investigación y pruebas de usuario
-* UI:
-    1. Diseño visual.
-    1. Colores.
-    1. Layouts.
-    1. Tipografías.
+1. UX:
+    * Diseño de interacción.
+    * Prototipado.
+    * Arquitectura de la información
+    * Investigación y pruebas de usuario
+1. UI:
+    * Diseño visual.
+    * Colores.
+    * Layouts.
+    * Tipografías.
 
 Cuando trabajamos con los dos diseños al mismo tiempo garantizamos que nuestra aplicación va a ser bonita, agradable y va a ser funcional para todos los usuarios. No debemos quitarle importancia a ninguno de los dos.
