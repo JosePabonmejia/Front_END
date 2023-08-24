@@ -47,3 +47,15 @@ Estas metodologías afectan tanto al diseño como a la funcionalidad.
 3º Diseño Visual 3º CSS
 2º Wireframes 2º HTML
 1º Contenido 1º Data
+
+## TIPS PARA LA ACCESIBILIDAD Y DISEÑO
+Una parte importante del diseño es la accesibilidad. La accesibilidad es la posibilidad de que cualquier persona pueda acceder a la web, no importa la incapacidad que tenga. Esta accesibilidad es obligatoria en todas la Webs.
+
+* Usar los encabezados correctos en cada lugar.
+* Usar fuentes legibles y visibles fácilmente.
+* Usar el contraste de colores adecuadamente.
+* Garantizar que los colores no sean el único código para relacionar el contenido.
+* Diseña teniendo en cuenta los eventos de la página. No quitar el focus o el active, y que estos sean diferentes.
+* Añade títulos descriptivos a los campos de un formulario.
+* Los ALT y descripciones de en la fotos y videos es vital.
+* Evitar que las animaciones bloqueen el contenido.
