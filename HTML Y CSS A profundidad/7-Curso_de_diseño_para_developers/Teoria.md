@@ -199,3 +199,69 @@ Después vamos a configurar nuestras variables dependiendo de los breakpoints.
 Creamos después una clase Grid para configurar cada uno de los elementos contenedores donde vamos a incluir nuestros componentes.<br>
 Finalmente le añadimos un display grid, que nos permite que toda esta configuración surta efecto. Y definimos un grip-column-gap para la distancia entre columnas y un grid-template-column que nos permite tener esta estructura.<br>
 Para definir el tamaño de un componente, se pone grid-column: 1/5, donde uno es la columna donde empieza, y 5 es la columna donde termina.<br>
+
+## SISTEMAS DE COMPONENTES UI
+
+Una de las metodologías que podemos usar es separar la funcionalidad por componentes.<br>
+Un sistema de componentes es un conjunto de componentes que vamos a usar par crear nuestra aplicación. Esos componentes funcionan como una librería.<br>
+Puedes usar cualquier tecnología que prefieras. Lo importante es encapsular las funcionalidades en componentes. Cada componente tendrá su propio css y funcionalidad dentro de su propia función.<br>
+Así podremos importar esas características a cualquier pantalla de nuestra aplicación, reutilizando el código y haciendo más eficiente nuestra aplicación.<br>
+En la clase de Wireframe creamos unos bocetos de unos componentes, que luego dividimos en unidades de funcionalidad.<br>
+La idea es crear a partir del wireframe todos los componentes y funcionalidades, y después le añadimos la capa visual.
+
+## THEMES Y CUSTOMIZACIONES
+
+Otra herramienta que podemos hacer uso en nuestra aplicación son los themes.
+
+### ¿Qué es un themes? 
+Es una capa de color y estilos que se añade por encima de nuestra aplicación y nos permite tener distintas variaciones sin hacer cambios drásticos en nuestro código. <br>En otras palabras, theme es un archivo donde tenemos configurado la presentación visual de toda la aplicación. <br>Teniendo dos o más theme podremos tener dos o más presentaciones visuales.<br>
+Para hacer los themes fácilmente podemos hacerlo por medio de variables de css o variables de Sass. Las variables de Sass son más sencillas.<br>
+Para tener varios themes, se crean un archivo de css por cada theme, pudiéndose intercambiar una por otra desde una archivo donde se configuran todos los archivos importados, sin tener que cambiar toda la programación de la aplicación.<br> Simplemente con cambiar el nombre de un archivo por otro se realiza el cambio de theme.
+
+## IMÁGENES WEB
+Las imágenes y videos y otros elementos decorativos nos ayudan a reforzar el mensaje que queremos dar en nuestra página.<br>
+### ¿Cómo elegir las imágenes para la web?
+
+Lo primero es tener claro los formatos de imágenes que podemos usar:
+* JPG: indicado para imágenes con degradados. Recomendado sobre PNG pues pesa menos.
+* PNG: Indicado para imágenes con fondo transparente.
+* SVG: Indicado para iconos y animaciones de baja complejidad. Es vectorial y se puede pasar a código, permitiendo editar sus propiedades con CSS.
+* GIF: No recomendado para animaciones largas pues pesa mucho.
+
+### ¿Qué imágenes podemos elegir?
+
+* Que aporten algo al contenido.
+* Usa imágenes en la que el publico objetivo se vea reflejado.
+* Elige las imágenes que se adecuen a la paleta de colores que seleccionaste.
+* Cuidado con las imágenes con licencia.
+
+### Otras consideraciones importantes de rendimiento y accesibilidad:
+
+* No exportes imágenes con texto incrustado. No las puede leer el lector de pantallas.
+* Poner imágenes del tamaño del contenedor. Cuando tenemos que modificar una imagen para que se adapte al contenedor, esta normalmente se estropea y no se ve correctamente. Y cuando son imágenes muy grandes, se agranda el tiempo de carga innecesariamente.
+* Considera el uso del “lazy loading”. Esta estrategia consiste en que las imágenes se van cargando a medida que hacemos scrool, minimizando el tiempo de carga de nuestro sitio.
+* Asegúrate de añadir ALT Text a las imágenes que tengan un fin comunicativo.
+
+### ***Resumen***
+### Imágenes para Web
+
+* JPG: Imágenes con degradados (ligero pero sin tanta calidad)
+* PNG: Fondo transparente
+* SVG: Vectores, usados en iconos y animaciones
+* GIF: En movimiento, es pesado
+
+### Como elegir:
+
+* Aporten al contenido
+* Dirigido al cliente
+* Consistente con la paleta de colores
+* Licencias
+
+### Rendimiento y accesibilidad
+
+* Evitar texto en las imágenes
+* Exportar al tamaño del contenedor final
+* Lazy loading: Cargando dinámico
+* Texto alternativo
+
+ 
