@@ -154,3 +154,48 @@ La idea es que uses la teoría del color para elegir los colores de tu aplicaci�
 * Menos es más. No satures de colores el sitio.
 * Asegura que el color elegido es accesible.
 * Define una paleta de color. Esto es un grupo de colores que vamos a usar en toda nuestra aplicación.
+
+[Herramienta para crear paletas de colores](https://color.adobe.com/explore)
+
+## TIPOGRAFÍAS.
+Otra de las cosas esenciales en una aplicación es el tipo de letra.<br>
+### Tips para el uso eficiente de tipografías:
+* No uses demasiados tipos de letras.
+* Usa fuentes estándar.
+* Limita la cantidad de texto. No son libros. Mucho texto echa a los usuarios de la página.
+* Selecciona tipos de textos legibles en diferentes tamaños.
+* Mantén las líneas separadas unas de otras. Los altos de línea que sean adecuados.
+* Que tengan suficiente contraste el texto con el fondo.
+* Evitar las animaciones intermitentes en los textos.
+Reglas de combinación de tipografía:<br>
+Las fuentes tienen personalidad.
+* Serif: tradicional, sofisticada, confiable, práctica, formal… Se puede combinar con Sans Serif, scripts, display… y se suele usar en logos, textos de párrafos, títulos, impresos.
+* Sans Serif: Moderna, limpia, humanista, geométrica, universal. Se combina con serif, script y slab serif. Sus usos son: logos, textos de párrafos, títulos y textos pequeños.
+* Script o fuente cursiva: Elegante, clásica, formal, sofisticada y estilizada. Combina con serif y sans serif. Se usa en logos, títulos e invitaciones. También textos cortos que queramos destacar.
+
+[Google fonts](https://fonts.google.com/)
+
+## LAYOUT Y SISTEMA DE GRILLAS.
+
+ ### ¿Qué es una grilla?
+
+Es un sistema de columnas creado por nosotros de acuerdo a las necesidades para ajustar nuestros elementos y componentes.<br>
+La mejor herramienta de CSS para crear una grilla es Grid.<br>
+Sass es un pre-procesador de CSS te ayuda a escribir CSS de una manera más rápida y más fácil.<br>
+Mixin es una clase que tiene dentro del pre-procesador, que te ayuda a manejar mejor los Breakpoints.<br>
+### ***Tenemos que configurar nuestros BreakPoints (Tipos de pantalla).***
+* $xs: 360px. Para móviles pequeños.
+* $s: 440px. Para móviles con la pantalla más grande.
+* $m: 768px. Para tablets.
+* $l: 1280px. Para Ordenadores pantalla normal.
+* $xl: 1440px. Monitores de alta calidad.
+
+### Podemos usar un Mixin para manejar los distintos breakpoints más fácilmente.
+Después vamos a configurar nuestras variables dependiendo de los breakpoints.
+
+* columns. Es el número de columnas que vamos a poner.
+* column-gap es el espacio entre las columnas.
+
+Creamos después una clase Grid para configurar cada uno de los elementos contenedores donde vamos a incluir nuestros componentes.<br>
+Finalmente le añadimos un display grid, que nos permite que toda esta configuración surta efecto. Y definimos un grip-column-gap para la distancia entre columnas y un grid-template-column que nos permite tener esta estructura.<br>
+Para definir el tamaño de un componente, se pone grid-column: 1/5, donde uno es la columna donde empieza, y 5 es la columna donde termina.<br>
