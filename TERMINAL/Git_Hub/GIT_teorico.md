@@ -351,7 +351,7 @@ git log --stat: cambios específicos en el archivo a partir de un commit.
 git show: cambios históricos y específicos hechos en un archivo.
 git diff “codigo de version 1” “codigo de version 2”: comparar cambios entre versiones.
 git diff: comparar directorio con staging.
-
+	
 //Cómo funcionan las llaves públicas y privadas
 
 Las llaves públicas y privadas, conocidas también como cifrado asimétrico de un solo camino, sirven para mandar mensajes privados entre varios nodos con la lógica de que firmas tu mensaje con una llave pública vinculada con una llave privada que puede leer el mensaje.

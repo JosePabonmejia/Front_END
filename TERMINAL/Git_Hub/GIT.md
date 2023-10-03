@@ -1,3 +1,17 @@
+//First for proyect
+$ git show : muestra los cambios que tuvo el repositorio 
+$ git diff idcommit idcimmit2 : git diff b6028b8526a162415e56ed16a48115ce08dced15 41c51e25d05baa2e3018f81688a749532ab1d7ce
+$ git log : para ver todos los commits
+$ git log --graph : Para ver commits con ramas y todo 
+$ git branch o git-branch --all :Muestra todas las ramas existentes
+$ git branch -nombre de la rama-: Con este comando se genera una nueva rama.
+$ git checkout -nombre de la rama-: Con este comando puedes saltar de una rama a otra.
+$ git reset id-commit: Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag., eliminando el historial de los commit posteriores al tag seleccionado.
+
+
+
+
+
 //Normales
 cd .. : ir a carpeta anterior 
 cat archivo.txt: mostrar rapidamente el contenido de un archivo 
@@ -145,5 +159,7 @@ pero primero debemos estar agregados en el repo como colaboradores
 //Flujo de trabajo profesional: Haciendo merge de ramas de desarrollo a master
 Por lo general la empresa te manda una rama para que puedas trabahar 
 
-
+$ git pull origin "rama nombre": Para traer todo lo que hay an la rama 
+$ git checkout "rama" : Para entrar en la rama 
+se hecen los cambios y hacemos un git commit am
 
