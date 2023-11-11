@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: solid 1px black;
+}
+body{
+    
+    display: grid;
+    place-items: center;
+}
+.numbers{
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto  ;
+    grid-template-areas: "1 2 3"
+                         "4 5 6"
+                         "7 8 9";
+}
+.uno{
+    grid-area: "1";
+}
+.uno p {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    text-align: center; /*Para el texto*/ 
+    line-height: 25px; /*Para lo vertical del texto*/
+    vertical-align: top; /*Para el alineamiento del contenedor*/ 
+}
+.dos{
+    grid-area: "2";
+}
+.dos p {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    text-align: center ;
+    line-height: 25px;
+    vertical-align: middle;
+    
+}
+.tres{
+    grid-area: "3";
+}
+.tres p {
+    background-color: papayawhip;
+    width: 50px;
+    height: 50px;
+    margin:50px 0;
+}
+.cuatro{
+    grid-area: "4";
+}
+.cuatro p {
+    background-color: purple;
+    width: 50px;
+    height: 50px;
+    margin: 0 25px;
+}
+.cinco{
+    grid-area: '5';
+}
+.cinco p {
+    background-color: yellow;
+    width: 50px;
+    height: 50px;
+    margin: 25px 25px;
+}
+.seis{
+    grid-area: '6';
+}
+.seis p {
+    background-color: greenyellow;
+    width: 50px;
+    height: 50px;
+    margin: 50px 25px;
+}
+.siete{
+    grid-area: '7';
+}
+.siete p {
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    margin: 0 50px;
+}
+.ocho{
+    grid-area: '8';
+}
+.ocho p {
+    background-color: orange;
+    width: 50px;
+    height: 50px;
+    margin: 25px 50px;
+}
+.nueve{
+    grid-area: '9';
+}
+.nueve p {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    margin: 50px 50px;
+}
